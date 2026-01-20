@@ -23,6 +23,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/aielectionlanding-/"
     },
     {
+        id: 18,
+        title: "BJ Attao",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "🎭",
+        description: "BJ Attao 크리에이터 플랫폼. 창작 콘텐츠와 엔터테인먼트 경험을 제공합니다.",
+        tags: ["크리에이터", "엔터테인먼트", "콘텐츠"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/BJAttao/index.html"
+    },
+    {
         id: 3,
         title: "AUTOBOOK STUDIO",
         category: "creative",
@@ -186,17 +197,6 @@ const solutions = [
         tags: ["AI", "교육", "AI톡", "대화"],
         status: "active",
         link: "https://aitalker.co.kr/edu007/1618"
-    },
-    {
-        id: 18,
-        title: "BJ Attao",
-        category: "creative",
-        categoryLabel: "크리에이티브",
-        icon: "🎭",
-        description: "BJ Attao 크리에이터 플랫폼. 창작 콘텐츠와 엔터테인먼트 경험을 제공합니다.",
-        tags: ["크리에이터", "엔터테인먼트", "콘텐츠"],
-        status: "active",
-        link: "https://jaiwshim-project.github.io/BJAttao/index.html"
     },
     {
         id: 19,
