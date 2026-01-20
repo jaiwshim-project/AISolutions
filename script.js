@@ -152,7 +152,7 @@ const solutions = [
         description: "치과 전문인력 교육 플랫폼. AI 기반 시뮬레이션과 맞춤형 커리큘럼으로 전문성을 향상시킵니다.",
         tags: ["AI", "치과", "교육", "아카데미"],
         status: "active",
-        link: "#"
+        link: "https://jaiwshim-project.github.io/dental_academy/"
     },
     {
         id: 14,
