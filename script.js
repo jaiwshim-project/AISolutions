@@ -130,7 +130,7 @@ const solutions = [
         description: "미래 역량 개발을 위한 AI 기반 학습 연구소. 창의성, 문제해결력, 협업 능력을 체계적으로 키웁니다.",
         tags: ["AI", "미래역량", "연구", "개발"],
         status: "active",
-        link: "#"
+        link: "https://jaiwshim-project.github.io/future_competency_ai_lab/"
     },
     {
         id: 12,
