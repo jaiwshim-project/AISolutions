@@ -53,7 +53,7 @@ const solutions = [
         description: "RQTDW 방법론 기반 AI 트레이닝 솔루션. 체계적인 사고력 훈련과 문제 해결 능력을 향상시킵니다.",
         tags: ["AI", "트레이닝", "사고력", "RQTDW"],
         status: "active",
-        link: "#"
+        link: "https://jaiwshim-project.github.io/rqtdw_thinking_OS/"
     },
     {
         id: 5,
