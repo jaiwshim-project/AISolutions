@@ -141,7 +141,7 @@ const solutions = [
         description: "AI 기반 영업 지원 솔루션. 고객 분석, 영업 전략 수립, 성과 추적을 통해 매출 증대를 도와줍니다.",
         tags: ["AI", "영업", "CRM", "분석"],
         status: "active",
-        link: "#"
+        link: "https://jaiwshim-project.github.io/sales_spark/"
     },
     {
         id: 13,
