@@ -119,7 +119,7 @@ const solutions = [
         description: "AI 튜터링 플랫폼. 학생 개인별 학습 수준에 맞는 1:1 맞춤형 교육을 제공합니다.",
         tags: ["AI", "튜터", "맞춤학습", "교육"],
         status: "active",
-        link: "#"
+        link: "https://jaiwshim-project.github.io/aitutorhub/"
     },
     {
         id: 11,
