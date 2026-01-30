@@ -252,6 +252,28 @@ const solutions = [
         tags: ["치과", "교육", "아카데미", "학습"],
         status: "active",
         link: "https://jaiwshim-project.github.io/11dentalacademy/user-select.html"
+    },
+    {
+        id: 24,
+        title: "S-TEAM 개원 로드맵",
+        category: "healthcare",
+        categoryLabel: "헬스케어",
+        icon: "🗺️",
+        description: "치과 개원 성공을 위한 5단계 통합 운영 시스템. 전략, 팀빌딩, 환자경험, 마케팅, 고객관리를 체계적으로 설계합니다.",
+        tags: ["치과", "개원", "경영", "로드맵"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/14_openbuildup/"
+    },
+    {
+        id: 25,
+        title: "소셜허브터널 사업계획",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "🚇",
+        description: "대전-옥천 폐터널을 활용한 스마트팜, 수제맥주 양조, AI 갤러리 복합 사업 계획. 사회적 가치와 경제적 효과를 동시에 추구합니다.",
+        tags: ["사업계획", "스마트팜", "사회적기업", "터널"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/21-Tunnel-Business-Plan/"
     }
 ];
 
