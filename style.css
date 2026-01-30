@@ -284,6 +284,100 @@ body {
 }
 
 /* ============================================
+   솔루션 리스트 배너
+   ============================================ */
+.solution-list-banner {
+    position: relative;
+    z-index: 1;
+    background: #1a1145;
+    padding: 24px 0;
+    border-top: 1px solid rgba(139, 92, 246, 0.25);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.solution-list-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.solution-list-total {
+    color: #facc15;
+    font-size: 1.3rem;
+    margin-left: 6px;
+}
+
+.solution-list-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.solution-list-category {
+    display: flex;
+    flex-direction: column;
+}
+
+.solution-list-category-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #c4b5fd;
+    padding: 8px 16px;
+    margin-bottom: 4px;
+    border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.solution-list-count {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: rgba(234, 179, 8, 0.2);
+    color: #facc15;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: auto;
+}
+
+.solution-list-item {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.08);
+    transition: all 0.2s ease;
+}
+
+.solution-list-item:last-child {
+    border-bottom: none;
+}
+
+.solution-list-item:hover {
+    color: #fff;
+    background: rgba(139, 92, 246, 0.1);
+    padding-left: 24px;
+}
+
+@media (max-width: 900px) {
+    .solution-list-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .solution-list-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* ============================================
    카테고리 네비게이션
    ============================================ */
 .category-nav {
@@ -355,9 +449,14 @@ body {
    검색 섹션
    ============================================ */
 .search-section {
+    max-width: 100%;
+    padding: 40px 20px;
+    background: #0d0a2a;
+}
+
+.search-section .search-wrapper {
     max-width: 600px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 0 auto;
 }
 
 .search-wrapper {
@@ -399,9 +498,14 @@ body {
    메인 & 그리드
    ============================================ */
 .main {
+    max-width: 100%;
+    padding: 20px 30px 80px;
+    background: #030014;
+}
+
+.main #solutions-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 30px 80px;
 }
 
 /* 카테고리 그룹 */

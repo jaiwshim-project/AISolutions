@@ -97,7 +97,7 @@ const solutions = [
         description: "치과 병원 맞춤형 광고 콘텐츠 자동 생성 플랫폼. SNS, 블로그, 동영상 콘텐츠를 손쉽게 제작합니다.",
         tags: ["AI", "치과", "광고", "마케팅"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/dental_ad/index.html"
+        link: "https://jaiwshim-project.github.io/3stepdentalad/index.html"
     },
     {
         id: 9,
@@ -241,6 +241,17 @@ const solutions = [
         tags: ["의료", "컨설팅", "병원경영", "헬스케어"],
         status: "active",
         link: "https://jaiwshim-project.github.io/mediconsulting/"
+    },
+    {
+        id: 23,
+        title: "덴탈 아카데미",
+        category: "healthcare",
+        categoryLabel: "헬스케어",
+        icon: "🏫",
+        description: "치과 전문 교육 아카데미. 맞춤형 학습 과정을 통해 치과 인력의 역량을 강화합니다.",
+        tags: ["치과", "교육", "아카데미", "학습"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/11dentalacademy/user-select.html"
     }
 ];
 
