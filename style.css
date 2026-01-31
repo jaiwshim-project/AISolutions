@@ -629,6 +629,8 @@ body {
     color: rgba(255, 255, 255, 0.95);
     border-bottom: 1px solid rgba(139, 92, 246, 0.08);
     transition: all 0.2s ease;
+    display: block;
+    text-decoration: none;
 }
 
 .solution-list-item:last-child {
