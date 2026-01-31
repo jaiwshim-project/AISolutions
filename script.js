@@ -619,3 +619,21 @@ passwordCancel.addEventListener('click', () => {
 document.querySelector('.password-modal-overlay').addEventListener('click', () => {
     passwordModal.classList.remove('active');
 });
+
+// ============================================
+// 모바일 네비게이션 토글
+// ============================================
+const navToggle = document.getElementById('navToggle');
+const topNavLinks = document.querySelector('.top-nav-links');
+
+if (navToggle && topNavLinks) {
+    navToggle.addEventListener('click', () => {
+        topNavLinks.classList.toggle('active');
+    });
+
+    topNavLinks.querySelectorAll('.top-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            topNavLinks.classList.remove('active');
+        });
+    });
+}
