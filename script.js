@@ -285,6 +285,17 @@ const solutions = [
         tags: ["Claude", "Supabase", "Vercel", "개발매뉴얼"],
         status: "active",
         link: "https://jaiwshim-project.github.io/41ClaudeManual/#home"
+    },
+    {
+        id: 27,
+        title: "덴탈클리닉파인더 프랜차이즈",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "🦷",
+        description: "AI 기반 치과 프랜차이즈 사업계획서. AI 환자상담 아카데미, 마케팅 자동화, QLRCQ 상담 매뉴얼 등 데이터 중심 운영 전략을 제공합니다.",
+        tags: ["AI", "치과", "프랜차이즈", "헬스케어"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/15-dental_franchise/"
     }
 ];
 
