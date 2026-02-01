@@ -266,7 +266,7 @@ const solutions = [
     },
     {
         id: 25,
-        title: "소셜허브터널 사업계획",
+        title: "소시얼허브터널 사업계획",
         category: "business",
         categoryLabel: "비즈니스",
         icon: "🚇",
