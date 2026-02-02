@@ -1366,44 +1366,38 @@ body {
 }
 
 /* 맨 위로 버튼 */
-.back-to-top {
+/* AI심재우톡 플로팅 버튼 */
+.floating-chat-btn {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #fff;
     text-decoration: none;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
+    border-radius: 50px;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
     z-index: 1000;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
 }
 
-.back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.back-to-top:hover {
-    transform: translateY(-5px);
+.floating-chat-btn:hover {
+    transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
 }
 
-.back-to-top svg {
-    transition: transform 0.3s ease;
+.floating-chat-icon {
+    font-size: 1.2rem;
 }
 
-.back-to-top:hover svg {
-    transform: translateY(-3px);
+.floating-chat-label {
+    white-space: nowrap;
 }
 
 /* 푸터 반응형 */
@@ -1464,12 +1458,6 @@ body {
         text-align: center;
     }
 
-    .back-to-top {
-        bottom: 20px;
-        right: 20px;
-        width: 45px;
-        height: 45px;
-    }
 }
 
 /* ============================================
@@ -1846,17 +1834,6 @@ body {
         font-size: 0.75rem;
     }
 
-    .back-to-top {
-        bottom: 15px;
-        right: 15px;
-        width: 40px;
-        height: 40px;
-    }
-
-    .back-to-top svg {
-        width: 18px;
-        height: 18px;
-    }
 }
 
 @media (max-width: 480px) {
