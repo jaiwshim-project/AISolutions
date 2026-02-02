@@ -1393,7 +1393,9 @@ body {
 }
 
 .floating-chat-icon {
-    font-size: 1.2rem;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
 }
 
 .floating-chat-label {
