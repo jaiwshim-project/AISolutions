@@ -290,10 +290,24 @@
     </div>
 
     <!-- AI심재우톡 플로팅 버튼 -->
-    <a href="https://aitalker.co.kr/jws/" target="_blank" class="floating-chat-btn" id="floatingChatBtn">
+    <button class="floating-chat-btn" id="floatingChatBtn" type="button">
         <img src="ai-assistant.png" alt="AI" class="floating-chat-icon">
         <span class="floating-chat-label">AI심재우톡</span>
-    </a>
+    </button>
+
+    <!-- AI심재우톡 팝업 -->
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-popup-header">
+            <div class="chat-popup-title">
+                <img src="ai-assistant.png" alt="AI" class="chat-popup-title-icon">
+                <span>AI심재우톡</span>
+            </div>
+            <button class="chat-popup-close" id="chatPopupClose" type="button">&times;</button>
+        </div>
+        <div class="chat-popup-body">
+            <iframe src="https://aitalker.co.kr/jws/" frameborder="0" allow="microphone; camera" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <script src="script.js?v=2"></script>
 </body>

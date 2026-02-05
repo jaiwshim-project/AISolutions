@@ -1365,7 +1365,6 @@ body {
     50% { opacity: 0.5; transform: scale(1.2); }
 }
 
-/* 맨 위로 버튼 */
 /* AI심재우톡 플로팅 버튼 */
 .floating-chat-btn {
     position: fixed;
@@ -1377,7 +1376,8 @@ body {
     padding: 12px 20px;
     background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
     color: #fff;
-    text-decoration: none;
+    border: none;
+    cursor: pointer;
     border-radius: 50px;
     box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
     z-index: 1000;
@@ -1400,6 +1400,99 @@ body {
 
 .floating-chat-label {
     white-space: nowrap;
+}
+
+/* AI심재우톡 팝업 */
+.chat-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 400px;
+    height: 600px;
+    background: #1a1025;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(139, 92, 246, 0.2);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.chat-popup.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.chat-popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+    flex-shrink: 0;
+}
+
+.chat-popup-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.chat-popup-title-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.chat-popup-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    line-height: 1;
+}
+
+.chat-popup-close:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.chat-popup-body {
+    flex: 1;
+    overflow: hidden;
+}
+
+.chat-popup-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* 팝업 모바일 반응형 */
+@media (max-width: 480px) {
+    .chat-popup {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
 }
 
 /* 푸터 반응형 */

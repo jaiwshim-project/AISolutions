@@ -695,3 +695,20 @@ if (navToggle && topNavLinks) {
         });
     });
 }
+
+// ============================================
+// AI심재우톡 팝업
+// ============================================
+const chatBtn = document.getElementById('floatingChatBtn');
+const chatPopup = document.getElementById('chatPopup');
+const chatPopupClose = document.getElementById('chatPopupClose');
+
+if (chatBtn && chatPopup && chatPopupClose) {
+    chatBtn.addEventListener('click', () => {
+        chatPopup.classList.toggle('active');
+    });
+
+    chatPopupClose.addEventListener('click', () => {
+        chatPopup.classList.remove('active');
+    });
+}
