@@ -373,6 +373,28 @@ const solutions = [
         tags: ["AI", "치과", "광고", "환자메시지"],
         status: "active",
         link: "https://jaiwshim-project.github.io/29-Ad_Gen_Engine_InOut/index.html"
+    },
+    {
+        id: 35,
+        title: "덴트맵AI 치과개원 입지분석",
+        category: "healthcare",
+        categoryLabel: "헬스케어",
+        icon: "📍",
+        description: "치과 개원을 위한 AI 기반 입지분석 솔루션. 인구, 경쟁, 임대료, 교통, 성장성 5가지 핵심 데이터를 AI가 분석하여 최적의 개원 입지를 추천합니다.",
+        tags: ["AI", "치과", "입지분석", "개원"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/16-Medical-Location-Selection-Map/#home"
+    },
+    {
+        id: 36,
+        title: "클라라 라디오카페",
+        category: "creative",
+        categoryLabel: "크리에이티브",
+        icon: "📻",
+        description: "레트로 감성의 실시간 라디오 스트리밍 플랫폼. 11가지 테마 디자인, 주파수 다이얼, 프리셋 저장, EQ 조절 등 클래식 라디오 경험을 제공합니다.",
+        tags: ["라디오", "스트리밍", "레트로", "엔터테인먼트"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/37-RadioCafe/"
     }
 ];
 
