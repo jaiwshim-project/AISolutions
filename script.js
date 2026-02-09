@@ -662,7 +662,7 @@ const passwordCancel = document.getElementById('passwordCancel');
 const passwordError = document.getElementById('passwordError');
 const githubLink = document.querySelector('.footer-contact-item[href*="github"]');
 
-const GITHUB_PASSWORD = '963314';
+const GITHUB_PASSWORD = '9633';
 const GITHUB_URL = 'https://github.com/jaiwshim-project';
 
 if (githubLink) {
