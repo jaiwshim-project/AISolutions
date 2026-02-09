@@ -8,6 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 페이지 접속 잠금 화면 -->
+    <div class="site-lock-overlay" id="siteLockOverlay">
+        <div class="site-lock-content">
+            <span class="site-lock-icon">🔒</span>
+            <h2>AI Solutions Portfolio</h2>
+            <p>비밀번호 4자리를 입력하세요</p>
+            <div class="site-lock-input-wrapper">
+                <input type="password" id="siteLockInput" maxlength="4" placeholder="••••" autocomplete="off">
+            </div>
+            <button class="site-lock-btn" id="siteLockSubmit">입장하기</button>
+            <p class="site-lock-error" id="siteLockError">비밀번호가 올바르지 않습니다</p>
+        </div>
+    </div>
+
     <!-- 상단 네비게이션 -->
     <nav class="top-nav" id="topNav">
         <div class="top-nav-container">
@@ -311,6 +325,6 @@
         </div>
     </div>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=6"></script>
 </body>
 </html>

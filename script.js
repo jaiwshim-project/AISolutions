@@ -653,6 +653,35 @@ document.querySelectorAll('.footer-link').forEach(link => {
 });
 
 // ============================================
+// 페이지 접속 잠금
+// ============================================
+const SITE_PASSWORD = '9633';
+const siteLockOverlay = document.getElementById('siteLockOverlay');
+const siteLockInput = document.getElementById('siteLockInput');
+const siteLockSubmit = document.getElementById('siteLockSubmit');
+const siteLockError = document.getElementById('siteLockError');
+
+document.body.style.overflow = 'hidden';
+setTimeout(() => siteLockInput.focus(), 300);
+
+function unlockSite() {
+    if (siteLockInput.value === SITE_PASSWORD) {
+        siteLockOverlay.classList.add('unlocked');
+        document.body.style.overflow = '';
+    } else {
+        siteLockError.classList.add('show');
+        siteLockInput.value = '';
+        siteLockInput.focus();
+        setTimeout(() => siteLockError.classList.remove('show'), 2000);
+    }
+}
+
+siteLockSubmit.addEventListener('click', unlockSite);
+siteLockInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') unlockSite();
+});
+
+// ============================================
 // GitHub 비밀번호 보호
 // ============================================
 const passwordModal = document.getElementById('passwordModal');
