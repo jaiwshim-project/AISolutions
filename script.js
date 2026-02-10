@@ -398,7 +398,7 @@ const solutions = [
     },
     {
         id: 37,
-        title: "일렉트맵AI 선거차량 전략",
+        title: "일렉션맵AI 선거차량 전략",
         category: "business",
         categoryLabel: "비즈니스",
         icon: "🚗",
