@@ -409,7 +409,7 @@ const solutions = [
     },
     {
         id: 38,
-        title: "FireNavi 화재대피 시뮬레이션",
+        title: "파이어내비 화재대피 AI시뮬레이션",
         category: "business",
         categoryLabel: "비즈니스",
         icon: "🔥",
