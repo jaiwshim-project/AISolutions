@@ -376,7 +376,7 @@ const solutions = [
     },
     {
         id: 35,
-        title: "덴트맵AI 치과개원 입지분석",
+        title: "덴탈맵AI 치과개원 입지분석",
         category: "healthcare",
         categoryLabel: "헬스케어",
         icon: "📍",
@@ -406,6 +406,17 @@ const solutions = [
         tags: ["AI", "선거", "경로최적화", "데이터분석"],
         status: "active",
         link: "https://jaiwshim-project.github.io/35-2-Election-Car-Route/"
+    },
+    {
+        id: 38,
+        title: "FireNavi 화재대피 시뮬레이션",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "🔥",
+        description: "호화유람선 전용 AI 화재 대피 시뮬레이션. A* 동적 경로탐색, 화재 확산 모델, 군중 밀집도 분석, 소방관 AI 시스템으로 최적 대피 전략을 설계합니다.",
+        tags: ["AI", "화재대피", "시뮬레이션", "안전"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/16-2-FireNavi/pages/simulation.html"
     }
 ];
 
