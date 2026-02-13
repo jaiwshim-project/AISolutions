@@ -417,6 +417,17 @@ const solutions = [
         tags: ["AI", "화재대피", "시뮬레이션", "안전"],
         status: "active",
         link: "https://jaiwshim-project.github.io/16-2-FireNavi/pages/simulation.html"
+    },
+    {
+        id: 39,
+        title: "택시빈차내비AI",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "🚕",
+        description: "서울시 택시 기사를 위한 AI 기반 운행 최적화 플랫폼. 실시간 수요 히트맵, AI 경로 최적화, 수익 시뮬레이션으로 빈차 시간은 줄이고 수익은 높입니다.",
+        tags: ["AI", "택시", "경로최적화", "모빌리티"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/03-3-Taxi_Route-AI_-Navi/index.html"
     }
 ];
 
