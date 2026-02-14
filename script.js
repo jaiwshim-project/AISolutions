@@ -428,6 +428,17 @@ const solutions = [
         tags: ["AI", "택시", "경로최적화", "모빌리티"],
         status: "active",
         link: "https://jaiwshim-project.github.io/03-3-Taxi_Route-AI_-Navi/index.html"
+    },
+    {
+        id: 40,
+        title: "PDF 슬라이드 편집기",
+        category: "creative",
+        categoryLabel: "크리에이티브",
+        icon: "📄",
+        description: "이미지 기반 슬라이드를 편집 가능한 상태로 복원하는 웹 도구. OCR 텍스트 복구, 로고 자동 삭제, 슬라이드 관리 등 PDF/PPTX 편집 기능을 제공합니다.",
+        tags: ["PDF", "슬라이드", "OCR", "편집기"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/38-PDF_Slide_Editor/index.html"
     }
 ];
 
