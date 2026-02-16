@@ -439,6 +439,17 @@ const solutions = [
         tags: ["PDF", "슬라이드", "OCR", "편집기"],
         status: "active",
         link: "https://jaiwshim-project.github.io/38-PDF_Slide_Editor/index.html"
+    },
+    {
+        id: 41,
+        title: "AIO/GEO Optimizer",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "🔎",
+        description: "AI 검색엔진(AI Overview, Generative Engine) 최적화 올인원 도구. AIO 점수 분석, GEO 최적화, 키워드 분석, AI 콘텐츠 생성 등 데이터 기반 콘텐츠 전략을 지원합니다.",
+        tags: ["AI", "SEO", "콘텐츠최적화", "마케팅"],
+        status: "active",
+        link: "https://aio-geo-optimizer.vercel.app/"
     }
 ];
 
