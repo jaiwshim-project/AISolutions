@@ -450,6 +450,17 @@ const solutions = [
         tags: ["AI", "SEO", "콘텐츠최적화", "마케팅"],
         status: "active",
         link: "https://aio-geo-optimizer.vercel.app/"
+    },
+    {
+        id: 42,
+        title: "NotebookLM 슬라이드 편집기",
+        category: "creative",
+        categoryLabel: "크리에이티브",
+        icon: "📝",
+        description: "Google Gemini AI 기반 슬라이드 편집 도구. PDF/이미지에서 텍스트를 자동 인식(OCR)하고 폰트·색상·레이아웃을 편집하여 PPT, PDF, 이미지로 내보낼 수 있습니다.",
+        tags: ["AI", "NotebookLM", "OCR", "슬라이드"],
+        status: "active",
+        link: "https://noneapi-notebooklm-slide-editor-319049557914.us-west1.run.app/"
     }
 ];
 
