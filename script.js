@@ -394,7 +394,7 @@ const solutions = [
         description: "레트로 감성의 실시간 라디오 스트리밍 플랫폼. 11가지 테마 디자인, 주파수 다이얼, 프리셋 저장, EQ 조절 등 클래식 라디오 경험을 제공합니다.",
         tags: ["라디오", "스트리밍", "레트로", "엔터테인먼트"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/37-RadioCafe/"
+        link: "https://radiokafe.com/"
     },
     {
         id: 37,
