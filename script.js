@@ -449,7 +449,7 @@ const solutions = [
         description: "AI 검색엔진(AI Overview, Generative Engine) 최적화 올인원 도구. AIO 점수 분석, GEO 최적화, 키워드 분석, AI 콘텐츠 생성 등 데이터 기반 콘텐츠 전략을 지원합니다.",
         tags: ["AI", "SEO", "콘텐츠최적화", "마케팅"],
         status: "active",
-        link: "https://aio-geo-optimizer.vercel.app/"
+        link: "https://www.geo-aio.com/"
     },
     {
         id: 42,
