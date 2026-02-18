@@ -442,7 +442,7 @@ const solutions = [
     },
     {
         id: 41,
-        title: "AIO/GEO Optimizer",
+        title: "GEO-AIO",
         category: "business",
         categoryLabel: "비즈니스",
         icon: "🔎",
