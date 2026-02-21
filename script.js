@@ -452,6 +452,17 @@ const solutions = [
         link: "https://www.geo-aio.com/"
     },
     {
+        id: 43,
+        title: "스타벅스 라디오카페",
+        category: "creative",
+        categoryLabel: "크리에이티브",
+        icon: "☕",
+        description: "스타벅스 테마의 레트로 라디오 스트리밍 플랫폼. 11가지 커피 테마 디자인, 주파수 다이얼, EQ 조절, 사진 관리, 한국·영어 음악 다운로드 등 감성적인 라디오카페 경험을 제공합니다.",
+        tags: ["라디오", "스타벅스", "스트리밍", "레트로"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/37-1-Starbucks_RadioKafe/"
+    },
+    {
         id: 42,
         title: "NotebookLM 슬라이드 편집기",
         category: "creative",
