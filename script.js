@@ -397,17 +397,6 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/16-Medical-Location-Selection-Map/#home"
     },
     {
-        id: 36,
-        title: "클라라 라디오카페",
-        category: "creative",
-        categoryLabel: "크리에이티브",
-        icon: "📻",
-        description: "레트로 감성의 실시간 라디오 스트리밍 플랫폼. 11가지 테마 디자인, 주파수 다이얼, 프리셋 저장, EQ 조절 등 클래식 라디오 경험을 제공합니다.",
-        tags: ["라디오", "스트리밍", "레트로", "엔터테인먼트"],
-        status: "active",
-        link: "https://radiokafe.com/"
-    },
-    {
         id: 37,
         title: "일렉션맵AI 선거차량 전략",
         category: "business",
@@ -472,6 +461,17 @@ const solutions = [
         tags: ["AI", "NotebookLM", "OCR", "슬라이드"],
         status: "active",
         link: "https://noneapi-notebooklm-slide-editor-319049557914.us-west1.run.app/"
+    },
+    {
+        id: 36,
+        title: "클라라 라디오카페",
+        category: "creative",
+        categoryLabel: "크리에이티브",
+        icon: "📻",
+        description: "레트로 감성의 실시간 라디오 스트리밍 플랫폼. 11가지 테마 디자인, 주파수 다이얼, 프리셋 저장, EQ 조절 등 클래식 라디오 경험을 제공합니다.",
+        tags: ["라디오", "스트리밍", "레트로", "엔터테인먼트"],
+        status: "active",
+        link: "https://radiokafe.com/"
     },
     {
         id: 43,
