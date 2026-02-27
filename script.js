@@ -23,6 +23,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/aielectionlanding-/"
     },
     {
+        id: 46,
+        title: "선거 후보자 비교 분석 AI",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "⚖️",
+        description: "Gemini AI 기반 선거 후보자 비교 분석 플랫폼. PDF 리포트 업로드 시 최대 5명의 후보를 10개 지표로 자동 분석하고 당선 전략 인텔리전스 보고서를 생성합니다.",
+        tags: ["선거", "후보자분석", "Gemini", "PDF"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/35-1-Election-Reports/"
+    },
+    {
         id: 18,
         title: "BJ Attao",
         category: "business",
