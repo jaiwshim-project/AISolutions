@@ -472,6 +472,17 @@ const solutions = [
         tags: ["라디오", "스타벅스", "스트리밍", "레트로"],
         status: "active",
         link: "https://jaiwshim-project.github.io/37-1-Starbucks_RadioKafe/"
+    },
+    {
+        id: 44,
+        title: "오세훈 라디오카페",
+        category: "creative",
+        categoryLabel: "크리에이티브",
+        icon: "📻",
+        description: "서울시장 오세훈과 함께하는 개인화 라디오 플랫폼. Supabase 기반 사용자 인증, 생년월일 운세·생일 알림, 양력/음력 선택, 반응형 다크 테마 UI를 제공합니다.",
+        tags: ["라디오", "개인화", "Supabase", "사용자인증"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/37-3-Kukmin/"
     }
 ];
 
