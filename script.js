@@ -483,6 +483,17 @@ const solutions = [
         tags: ["라디오", "개인화", "Supabase", "사용자인증"],
         status: "active",
         link: "https://jaiwshim-project.github.io/37-3-Kukmin/"
+    },
+    {
+        id: 45,
+        title: "더불어민주당 라디오카페",
+        category: "creative",
+        categoryLabel: "크리에이티브",
+        icon: "🔵",
+        description: "더불어민주당 당원과 함께하는 개인화 라디오 플랫폼. Supabase 기반 사용자 인증, 생년월일 운세·생일 알림, 양력/음력 선택, 레트로 다크 테마 UI를 제공합니다.",
+        tags: ["라디오", "민주당", "Supabase", "사용자인증"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/37-2-Deobuleo_Minjudang/"
     }
 ];
 
