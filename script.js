@@ -505,6 +505,17 @@ const solutions = [
         tags: ["라디오", "민주당", "Supabase", "사용자인증"],
         status: "active",
         link: "https://jaiwshim-project.github.io/37-2-Deobuleo_Minjudang/"
+    },
+    {
+        id: 47,
+        title: "Claude Code Orchestration",
+        category: "education",
+        categoryLabel: "교육",
+        icon: "🎼",
+        description: "AI 에이전트 오케스트레이션 중앙 관리 대시보드. 활성 에이전트·태스크 실시간 모니터링, 7일간 활동 분석, 이벤트 로그, 성공률·응답 지연시간 추적 등을 제공합니다.",
+        tags: ["Claude", "오케스트레이션", "AI에이전트", "모니터링"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/51-1-ClaudeCode_Orchestration/"
     }
 ];
 
