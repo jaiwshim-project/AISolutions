@@ -24,7 +24,7 @@ const solutions = [
     },
     {
         id: 46,
-        title: "선거 후보자 비교 분석 AI",
+        title: "선거 후보자 비교 분석 리포트 AI",
         category: "business",
         categoryLabel: "비즈니스",
         icon: "⚖️",
