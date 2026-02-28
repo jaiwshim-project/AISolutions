@@ -837,7 +837,7 @@ const AUTH_KEY = 'ai_portfolio_auth';
 let pendingUrl = null;
 
 function isAuthenticated() {
-    return localStorage.getItem(AUTH_KEY) === 'true';
+    return sessionStorage.getItem(AUTH_KEY) === 'true';
 }
 
 function openLink(url) {
@@ -883,7 +883,7 @@ passwordInput.addEventListener('keypress', (e) => {
 
 function checkPassword() {
     if (passwordInput.value === LINK_PASSWORD) {
-        localStorage.setItem(AUTH_KEY, 'true');
+        sessionStorage.setItem(AUTH_KEY, 'true');
         passwordModal.classList.remove('active');
         if (pendingUrl) {
             openLink(pendingUrl);
