@@ -442,7 +442,7 @@ const solutions = [
     },
     {
         id: 41,
-        title: "GEO-AIO",
+        title: "GEO-AIO 콘텐츠 생성 플랫폼",
         category: "business",
         categoryLabel: "비즈니스",
         icon: "🔎",
