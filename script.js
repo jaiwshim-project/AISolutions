@@ -34,6 +34,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/35-1-Election-Reports/"
     },
     {
+        id: 37,
+        title: "일렉션맵AI 선거차량 전략",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "🚗",
+        description: "AI 기반 선거 차량 운영 최적화 플랫폼. 유권자 밀집도 히트맵, 차량 경로 최적화, 비용 분석, 경쟁 후보 분석 등 데이터로 선거 유세 전략을 설계합니다.",
+        tags: ["AI", "선거", "경로최적화", "데이터분석"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/35-2-Election-Car-Route/"
+    },
+    {
         id: 18,
         title: "BJ Attao",
         category: "business",
@@ -395,17 +406,6 @@ const solutions = [
         tags: ["AI", "치과", "입지분석", "개원"],
         status: "active",
         link: "https://jaiwshim-project.github.io/16-Medical-Location-Selection-Map/#home"
-    },
-    {
-        id: 37,
-        title: "일렉션맵AI 선거차량 전략",
-        category: "business",
-        categoryLabel: "비즈니스",
-        icon: "🚗",
-        description: "AI 기반 선거 차량 운영 최적화 플랫폼. 유권자 밀집도 히트맵, 차량 경로 최적화, 비용 분석, 경쟁 후보 분석 등 데이터로 선거 유세 전략을 설계합니다.",
-        tags: ["AI", "선거", "경로최적화", "데이터분석"],
-        status: "active",
-        link: "https://jaiwshim-project.github.io/35-2-Election-Car-Route/"
     },
     {
         id: 38,
