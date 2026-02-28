@@ -56,6 +56,17 @@ const solutions = [
         link: "https://sunwoongkyu.github.io/AI_MagicShow/v40_process_diagram.html#phase5"
     },
     {
+        id: 49,
+        title: "AI-IP Strategy OS",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "⚖️",
+        description: "Gemini AI 기반 특허·저작권 자동 고도화 플랫폼. 아이디어를 법적 권리로 전환하는 전 과정을 자동화하며, 특허 강도 점수(PSM), 권리 강도 지수(RSI), 거절 위험 예측 등 전략적 IP 포트폴리오 관리를 지원합니다.",
+        tags: ["특허", "저작권", "IP전략", "Gemini"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/41-6-Patent_Copyright_Generation/"
+    },
+    {
         id: 18,
         title: "BJ Attao",
         category: "business",
