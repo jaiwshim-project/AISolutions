@@ -643,6 +643,27 @@ body {
     padding-left: 24px;
 }
 
+/* 솔루션 리스트 그룹 색상 */
+.solution-list-item.gi-election { color: #7ec8e8; }
+.solution-list-item.gi-election:hover { color: #aaddf5; }
+.solution-list-item.gi-radio    { color: #f4a7b0; }
+.solution-list-item.gi-radio:hover { color: #ffc5cc; }
+.solution-list-item.gi-dental   { color: #7dd87d; }
+.solution-list-item.gi-dental:hover { color: #a8eeaa; }
+.solution-list-item.gi-claude   { color: #c3a4e8; }
+.solution-list-item.gi-claude:hover { color: #dcc4f8; }
+.solution-list-item.gi-navi     { color: #ffb74d; }
+.solution-list-item.gi-navi:hover { color: #ffd080; }
+.solution-list-item.gi-slide    { color: #ffe082; }
+.solution-list-item.gi-slide:hover { color: #fff3b0; }
+
+/* 그룹 경계선 */
+.solution-list-item.group-start {
+    margin-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 8px;
+}
+
 @media (max-width: 900px) {
     .solution-list-container {
         grid-template-columns: 1fr 1fr;
