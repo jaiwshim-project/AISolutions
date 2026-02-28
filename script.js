@@ -45,6 +45,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/35-2-Election-Car-Route/"
     },
     {
+        id: 48,
+        title: "V40 정치인 평가 시스템",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "🏛️",
+        description: "4개 AI(Claude·ChatGPT·Grok·Gemini)가 정치인을 전문성·청렴성·리더십 등 10개 지표로 독립 평가하는 종합 시스템. 베이지안 점수 계산과 상세 평가 보고서를 생성합니다.",
+        tags: ["선거", "정치인평가", "멀티AI", "데이터분석"],
+        status: "active",
+        link: "https://sunwoongkyu.github.io/AI_MagicShow/v40_process_diagram.html#phase5"
+    },
+    {
         id: 18,
         title: "BJ Attao",
         category: "business",
