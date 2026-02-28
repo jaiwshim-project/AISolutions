@@ -796,54 +796,48 @@ document.querySelectorAll('.footer-link').forEach(link => {
 });
 
 // ============================================
-// 페이지 접속 잠금
+// 페이지 접속 잠금 (비활성화 - 랜딩 페이지 바로 노출)
 // ============================================
-const SITE_PASSWORD = '9633';
 const siteLockOverlay = document.getElementById('siteLockOverlay');
-const siteLockInput = document.getElementById('siteLockInput');
-const siteLockSubmit = document.getElementById('siteLockSubmit');
-const siteLockError = document.getElementById('siteLockError');
-
-document.body.style.overflow = 'hidden';
-setTimeout(() => siteLockInput.focus(), 300);
-
-function unlockSite() {
-    if (siteLockInput.value === SITE_PASSWORD) {
-        siteLockOverlay.classList.add('unlocked');
-        document.body.style.overflow = '';
-    } else {
-        siteLockError.classList.add('show');
-        siteLockInput.value = '';
-        siteLockInput.focus();
-        setTimeout(() => siteLockError.classList.remove('show'), 2000);
-    }
-}
-
-siteLockSubmit.addEventListener('click', unlockSite);
-siteLockInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') unlockSite();
-});
+if (siteLockOverlay) siteLockOverlay.style.display = 'none';
 
 // ============================================
-// GitHub 비밀번호 보호
+// 링크 비밀번호 보호 (카드 링크 + GitHub)
 // ============================================
 const passwordModal = document.getElementById('passwordModal');
 const passwordInput = document.getElementById('passwordInput');
 const passwordSubmit = document.getElementById('passwordSubmit');
 const passwordCancel = document.getElementById('passwordCancel');
 const passwordError = document.getElementById('passwordError');
+
+const LINK_PASSWORD = '9633';
+let pendingUrl = null;
+
+function openPasswordModal(url) {
+    pendingUrl = url;
+    passwordModal.classList.add('active');
+    passwordInput.value = '';
+    passwordError.classList.remove('show');
+    setTimeout(() => passwordInput.focus(), 100);
+}
+
+// 솔루션 카드 링크 + 솔루션 목록 배너 링크 클릭 가로채기 (이벤트 위임)
+document.addEventListener('click', (e) => {
+    const cardLink = e.target.closest('.card-link');
+    const listLink = e.target.closest('a.solution-list-item');
+    const target = cardLink || listLink;
+    if (target && target.href && target.href !== '#' && !target.href.endsWith('#')) {
+        e.preventDefault();
+        openPasswordModal(target.href);
+    }
+});
+
+// GitHub 링크
 const githubLink = document.querySelector('.footer-contact-item[href*="github"]');
-
-const GITHUB_PASSWORD = '9633';
-const GITHUB_URL = 'https://github.com/jaiwshim-project';
-
 if (githubLink) {
     githubLink.addEventListener('click', (e) => {
         e.preventDefault();
-        passwordModal.classList.add('active');
-        passwordInput.value = '';
-        passwordError.classList.remove('show');
-        setTimeout(() => passwordInput.focus(), 100);
+        openPasswordModal('https://github.com/jaiwshim-project');
     });
 }
 
@@ -853,9 +847,12 @@ passwordInput.addEventListener('keypress', (e) => {
 });
 
 function checkPassword() {
-    if (passwordInput.value === GITHUB_PASSWORD) {
+    if (passwordInput.value === LINK_PASSWORD) {
         passwordModal.classList.remove('active');
-        window.open(GITHUB_URL, '_blank');
+        if (pendingUrl) {
+            window.open(pendingUrl, '_blank');
+            pendingUrl = null;
+        }
     } else {
         passwordError.classList.add('show');
         passwordInput.value = '';
@@ -866,10 +863,12 @@ function checkPassword() {
 
 passwordCancel.addEventListener('click', () => {
     passwordModal.classList.remove('active');
+    pendingUrl = null;
 });
 
 document.querySelector('.password-modal-overlay').addEventListener('click', () => {
     passwordModal.classList.remove('active');
+    pendingUrl = null;
 });
 
 // ============================================
