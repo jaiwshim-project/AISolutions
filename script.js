@@ -57,7 +57,7 @@ const solutions = [
     },
     {
         id: 49,
-        title: "AI-IP Strategy OS",
+        title: "AI-IP Strategy(특허-저작권) OS",
         category: "business",
         categoryLabel: "비즈니스",
         icon: "⚖️",
