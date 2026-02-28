@@ -811,9 +811,22 @@ const passwordCancel = document.getElementById('passwordCancel');
 const passwordError = document.getElementById('passwordError');
 
 const LINK_PASSWORD = '9633';
+const AUTH_KEY = 'ai_portfolio_auth';
 let pendingUrl = null;
 
+function isAuthenticated() {
+    return localStorage.getItem(AUTH_KEY) === 'true';
+}
+
+function openLink(url) {
+    window.open(url, '_blank');
+}
+
 function openPasswordModal(url) {
+    if (isAuthenticated()) {
+        openLink(url);
+        return;
+    }
     pendingUrl = url;
     passwordModal.classList.add('active');
     passwordInput.value = '';
@@ -848,9 +861,10 @@ passwordInput.addEventListener('keypress', (e) => {
 
 function checkPassword() {
     if (passwordInput.value === LINK_PASSWORD) {
+        localStorage.setItem(AUTH_KEY, 'true');
         passwordModal.classList.remove('active');
         if (pendingUrl) {
-            window.open(pendingUrl, '_blank');
+            openLink(pendingUrl);
             pendingUrl = null;
         }
     } else {
