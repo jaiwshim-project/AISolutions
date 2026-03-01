@@ -67,6 +67,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/41-6-Patent_Copyright_Generation/"
     },
     {
+        id: 50,
+        title: "AI 플랫폼 프로젝트 인덱스",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "🗂️",
+        description: "심재우의 AI 기반 프로젝트 전체를 체계적으로 관리·검색할 수 있는 포트폴리오 플랫폼. 치과·교육·선거·미디어 등 7개 카테고리 50여 개 프로젝트를 통합 관리하며, 커스텀 탭·일괄 편집·로컬스토리지 저장 기능을 지원합니다.",
+        tags: ["포트폴리오", "프로젝트관리", "인덱스", "플랫폼"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/00-Shim_Platform_Index/"
+    },
+    {
         id: 18,
         title: "BJ Attao",
         category: "business",
