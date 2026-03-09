@@ -67,6 +67,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/41-6-Patent_Copyright_Generation/"
     },
     {
+        id: 51,
+        title: "AX BizGroup CEO 마스터 플랫폼",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "👔",
+        description: "AX 시대 CEO를 위한 통합 경영 인텔리전스 플랫폼. 전략·프로젝트·재무·AI 플랫폼·커뮤니티를 하나의 대시보드로 통합하며, 18개 프로젝트 KPI 실시간 모니터링, CRM, 비즈니스 파이프라인, AI 기업가 네트워크(247명) 관리 등 CEO 의사결정 지원 기능을 제공합니다.",
+        tags: ["CEO대시보드", "경영인텔리전스", "KPI", "AX전략"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/01-2-AXBizGroup/index"
+    },
+    {
         id: 50,
         title: "AI 플랫폼 프로젝트 인덱스",
         category: "business",
