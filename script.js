@@ -67,6 +67,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/41-6-Patent_Copyright_Generation/"
     },
     {
+        id: 52,
+        title: "디지털스마일치과 AI 뉴스 큐레이션",
+        category: "healthcare",
+        categoryLabel: "헬스케어",
+        icon: "🦷",
+        description: "Gemini AI 기반 치과 AI 뉴스 자동 큐레이션 플랫폼. URL 등록 시 AI가 자동으로 한국어 요약·카테고리 분류·태그·읽기 시간을 생성하며, 게시판형/썸네일형 두 가지 보기를 지원합니다.",
+        tags: ["치과", "AI뉴스", "Gemini", "헬스케어"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/12-4-DigitalSmileDC/articles.html"
+    },
+    {
         id: 51,
         title: "AX BizGroup CEO 마스터 플랫폼",
         category: "business",
