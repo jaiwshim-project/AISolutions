@@ -67,6 +67,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/41-6-Patent_Copyright_Generation/"
     },
     {
+        id: 54,
+        title: "VCOS 바이브코딩 OS",
+        category: "creative",
+        categoryLabel: "크리에이티브",
+        icon: "🖥️",
+        description: "아이디어를 입력하면 AI 분대 편성·스킬 전략·토큰 최적화·Claude Code 명령어를 자동 생성하는 바이브 코딩 운영체계. 복잡도 6축 분석, 최대 6개 분대 자동 배치, 21개 스킬 전략, 95점 고도화 엔진을 탑재한 AI 개발 자동화 플랫폼입니다.",
+        tags: ["바이브코딩", "AI개발", "분대편성", "ClaudeCode"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/10-VibeCoding_OS/"
+    },
+    {
         id: 53,
         title: "AX덴탈그룹 AI 경영 플랫폼",
         category: "healthcare",
