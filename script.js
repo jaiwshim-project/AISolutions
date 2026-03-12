@@ -67,6 +67,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/41-6-Patent_Copyright_Generation/"
     },
     {
+        id: 53,
+        title: "AX덴탈그룹 AI 경영 플랫폼",
+        category: "healthcare",
+        categoryLabel: "헬스케어",
+        icon: "🏥",
+        description: "세계 최초 치과 AI 경영 플랫폼. 파노라마·CT AI 진단 리포트 자동 생성, SEO·SNS 마케팅 AI, 수익률 분석·노쇼 예측·보험청구 최적화 경영 AI까지 치과 원장이 진료에 집중할 수 있는 통합 솔루션입니다.",
+        tags: ["치과경영", "AI진단", "마케팅AI", "헬스테크"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/01-3-AXDentalGroup/index.html"
+    },
+    {
         id: 52,
         title: "디지털스마일치과 AI 뉴스 큐레이션",
         category: "healthcare",
