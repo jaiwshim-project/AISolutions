@@ -69,13 +69,13 @@ const solutions = [
     {
         id: 56,
         title: "AX교육플랫폼",
-        category: "education",
-        categoryLabel: "교육",
+        category: "axgroup",
+        categoryLabel: "AX그룹",
         icon: "🎓",
         description: "AI 전환 전문가 양성 생태계. 5개 영역 50개 강의와 4단계 자격증 체계(Practitioner → Builder → Architect → Strategist), 100개 이상의 기업 프로젝트 실습, 전문가 커뮤니티를 통해 AX 전문가를 육성합니다.",
         tags: ["AX교육", "AI전환", "자격증", "기업프로젝트"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/10-07-AXEduPlatform/"
+        link: "https://jaiwshim-project.github.io/10-07-AXEduPlatform/index.html"
     },
     {
         id: 55,
@@ -102,8 +102,8 @@ const solutions = [
     {
         id: 53,
         title: "AX덴탈그룹 AI 경영 플랫폼",
-        category: "healthcare",
-        categoryLabel: "헬스케어",
+        category: "axgroup",
+        categoryLabel: "AX그룹",
         icon: "🏥",
         description: "세계 최초 치과 AI 경영 플랫폼. 파노라마·CT AI 진단 리포트 자동 생성, SEO·SNS 마케팅 AI, 수익률 분석·노쇼 예측·보험청구 최적화 경영 AI까지 치과 원장이 진료에 집중할 수 있는 통합 솔루션입니다.",
         tags: ["치과경영", "AI진단", "마케팅AI", "헬스테크"],
@@ -124,8 +124,8 @@ const solutions = [
     {
         id: 51,
         title: "AX BizGroup CEO 마스터 플랫폼",
-        category: "business",
-        categoryLabel: "비즈니스",
+        category: "axgroup",
+        categoryLabel: "AX그룹",
         icon: "👔",
         description: "AX 시대 CEO를 위한 통합 경영 인텔리전스 플랫폼. 전략·프로젝트·재무·AI 플랫폼·커뮤니티를 하나의 대시보드로 통합하며, 18개 프로젝트 KPI 실시간 모니터링, CRM, 비즈니스 파이프라인, AI 기업가 네트워크(247명) 관리 등 CEO 의사결정 지원 기능을 제공합니다.",
         tags: ["CEO대시보드", "경영인텔리전스", "KPI", "AX전략"],
@@ -135,8 +135,8 @@ const solutions = [
     {
         id: 50,
         title: "AI 플랫폼 프로젝트 인덱스",
-        category: "business",
-        categoryLabel: "비즈니스",
+        category: "axgroup",
+        categoryLabel: "AX그룹",
         icon: "🗂️",
         description: "심재우의 AI 기반 프로젝트 전체를 체계적으로 관리·검색할 수 있는 포트폴리오 플랫폼. 치과·교육·선거·미디어 등 7개 카테고리 50여 개 프로젝트를 통합 관리하며, 커스텀 탭·일괄 편집·로컬스토리지 저장 기능을 지원합니다.",
         tags: ["포트폴리오", "프로젝트관리", "인덱스", "플랫폼"],
@@ -706,6 +706,7 @@ function updateNavCounts() {
     document.getElementById('nav-biz').textContent = solutions.filter(s => s.category === 'business').length;
     document.getElementById('nav-health').textContent = solutions.filter(s => s.category === 'healthcare').length;
     document.getElementById('nav-creative').textContent = solutions.filter(s => s.category === 'creative').length;
+    document.getElementById('nav-ax').textContent = solutions.filter(s => s.category === 'axgroup').length;
 }
 
 // ============================================
