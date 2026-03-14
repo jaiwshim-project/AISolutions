@@ -68,7 +68,7 @@ const solutions = [
     },
     {
         id: 55,
-        title: "질문수학",
+        title: "질문수학(Q-Math)",
         category: "education",
         categoryLabel: "교육",
         icon: "📐",
