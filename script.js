@@ -75,7 +75,7 @@ const solutions = [
         description: "질문으로 시작하는 수학 사고 교육 플랫폼. 공식 암기가 아닌 개념 이해 중심의 6단계 학습 프로세스와 Gemini AI 튜터를 통해 수학적 사고력을 키웁니다. 레벨 테스트, 대시보드, 게임형 학습 활동을 지원합니다.",
         tags: ["수학", "질문학습", "Gemini", "AI튜터"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/30-11-Question_Math/"
+        link: "https://30-11-question-math.vercel.app/"
     },
     {
         id: 54,
