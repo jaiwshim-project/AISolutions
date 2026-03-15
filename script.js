@@ -67,6 +67,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/41-6-Patent_Copyright_Generation/"
     },
     {
+        id: 57,
+        title: "공대생 할아버지, 미대생 할머니",
+        category: "creative",
+        categoryLabel: "크리에이티브",
+        icon: "🎨",
+        description: "수채화 일러스트와 함께하는 연재 이야기. 논리적인 공대생 할아버지와 감성적인 미대생 할머니의 만남부터 노년까지, 60개 에피소드를 담은 그림 갤러리입니다.",
+        tags: ["수채화", "일러스트", "스토리", "갤러리", "연재"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/70-01-GrandPa_Mom/gallery.html"
+    },
+    {
         id: 56,
         title: "AX교육플랫폼",
         category: "axgroup",
