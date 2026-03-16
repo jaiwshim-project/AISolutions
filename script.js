@@ -67,6 +67,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/41-6-Patent_Copyright_Generation/"
     },
     {
+        id: 59,
+        title: "n8n AI 슈퍼 플랫폼",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "⚡",
+        description: "AI + 자동화 + 데이터의 완벽한 융합. n8n 기반 AI 에이전트 시스템으로 웹 검색·API 호출·RAG 지식 시스템을 결합하고, Slack·Notion·Google Sheets 등과 연동해 비즈니스 업무를 자동 처리합니다.",
+        tags: ["n8n", "AI에이전트", "자동화", "RAG", "워크플로"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/10-08-n8n_AI-Super_Platform/"
+    },
+    {
         id: 58,
         title: "유튜브 자동화 플랫폼",
         category: "creative",
