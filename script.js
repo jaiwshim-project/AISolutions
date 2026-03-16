@@ -67,6 +67,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/41-6-Patent_Copyright_Generation/"
     },
     {
+        id: 58,
+        title: "유튜브 자동화 플랫폼",
+        category: "creative",
+        categoryLabel: "크리에이티브",
+        icon: "🎬",
+        description: "소재 하나로 리서치 → 대본 → 이미지 → 음성 → 편집 → 업로드까지 전 과정을 AI가 자동 처리하는 유튜브 영상 제작 자동화 플랫폼. Claude·Gemini·ElevenLabs API 연동, 롱폼·숏폼 모두 지원합니다.",
+        tags: ["유튜브", "영상자동화", "Claude", "Gemini", "ElevenLabs"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/40-12-Youtube_Gen/"
+    },
+    {
         id: 57,
         title: "공대생 할아버지, 미대생 할머니",
         category: "creative",
