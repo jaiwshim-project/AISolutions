@@ -38,7 +38,7 @@
 }
 
 .top-nav-link {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
@@ -148,7 +148,7 @@
 }
 
 .profile-role {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.85rem;
     margin-bottom: 0.6rem;
 }
@@ -177,7 +177,7 @@
 }
 
 .profile-content {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.95);
 }
 
 .profile-block {
@@ -242,7 +242,7 @@
 }
 
 .profile-highlight-box.red p {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.8rem;
 }
 
@@ -265,13 +265,13 @@
     padding: 0.1rem 0;
     line-height: 1.5;
     font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.95);
 }
 
 .profile-note {
     margin-top: 0.6rem;
     font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.85);
     font-style: italic;
 }
 
@@ -528,7 +528,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.95);
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -708,7 +708,7 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 12px;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.95);
     font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
@@ -768,7 +768,7 @@ body {
     left: 24px;
     top: 50%;
     transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .search-input {
@@ -784,7 +784,7 @@ body {
 }
 
 .search-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .search-input:focus {
@@ -1190,16 +1190,13 @@ body {
 }
 
 .logo-text {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #fff;
 }
 
 .footer-tagline {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.95);
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 25px;
@@ -1255,7 +1252,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
@@ -1303,7 +1300,7 @@ body {
 }
 
 .footer-stat-text {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.95);
     font-size: 0.9rem;
     font-weight: 500;
 }
@@ -1313,7 +1310,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
@@ -1323,7 +1320,7 @@ body {
 }
 
 .footer-contact-item svg {
-    opacity: 0.7;
+    opacity: 1;
     transition: all 0.3s ease;
 }
 
@@ -1354,7 +1351,7 @@ body {
 }
 
 .footer-copyright {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 0.9rem;
 }
 
@@ -1365,7 +1362,7 @@ body {
 }
 
 .powered-text {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 0.9rem;
 }
 
@@ -2103,7 +2100,7 @@ body {
 }
 
 .site-lock-content > p {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.95rem;
     margin-bottom: 25px;
 }
@@ -2234,7 +2231,7 @@ body {
 }
 
 .password-modal-header p {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.95);
     font-size: 0.95rem;
 }
 
@@ -2257,7 +2254,7 @@ body {
 }
 
 .password-input-wrapper input::placeholder {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.65);
     letter-spacing: 8px;
 }
 
@@ -2285,7 +2282,7 @@ body {
 
 .password-btn.cancel {
     background: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
