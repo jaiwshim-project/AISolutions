@@ -67,6 +67,17 @@ const solutions = [
         link: "https://jaiwshim-project.github.io/41-6-Patent_Copyright_Generation/"
     },
     {
+        id: 60,
+        title: "미래역량AI연구소",
+        category: "education",
+        categoryLabel: "교육",
+        icon: "🔬",
+        description: "ChatGPT·Claude·프롬프트·자동화까지 실무에 바로 쓸 수 있는 AI 학습 플랫폼. Gemini AI 기반 맞춤 강의 추천, 학습 진도 관리, 2,300여 개 무료 강의를 7개 대분류·28개 중분류로 체계적으로 제공합니다.",
+        tags: ["AI교육", "강의플랫폼", "Gemini", "프롬프트", "자동화"],
+        status: "active",
+        link: "https://jaiwshim-project.github.io/30-12-FCAI_Lab/"
+    },
+    {
         id: 59,
         title: "n8n AI 슈퍼 플랫폼",
         category: "business",
