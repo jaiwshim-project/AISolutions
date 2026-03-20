@@ -659,6 +659,17 @@ const solutions = [
         tags: ["Claude", "오케스트레이션", "AI에이전트", "모니터링"],
         status: "active",
         link: "https://jaiwshim-project.github.io/51-1-ClaudeCode_Orchestration/"
+    },
+    {
+        id: 48,
+        title: "후보 선거 워룸",
+        category: "election",
+        categoryLabel: "선거",
+        icon: "🗳️",
+        description: "AI 기반 선거 캠프 중앙 관리 플랫폼. 후보 전략, 유권자 관계 관리, 캠프인 분석, 실시간 선거 현황 모니터링 등을 제공합니다.",
+        tags: ["선거", "캠페인", "분석", "AI"],
+        status: "active",
+        link: "https://10-00-02.vercel.app/index.html"
     }
 ];
 
@@ -667,7 +678,8 @@ const categories = [
     { key: 'education', label: '교육 솔루션', icon: '📚' },
     { key: 'business', label: '비즈니스 솔루션', icon: '💼' },
     { key: 'healthcare', label: '헬스케어 솔루션', icon: '🏥' },
-    { key: 'creative', label: '크리에이티브 솔루션', icon: '🎨' }
+    { key: 'creative', label: '크리에이티브 솔루션', icon: '🎨' },
+    { key: 'election', label: '선거 솔루션', icon: '🗳️' }
 ];
 
 // DOM 요소
