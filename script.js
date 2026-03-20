@@ -679,7 +679,8 @@ const categories = [
     { key: 'business', label: '비즈니스 솔루션', icon: '💼' },
     { key: 'healthcare', label: '헬스케어 솔루션', icon: '🏥' },
     { key: 'creative', label: '크리에이티브 솔루션', icon: '🎨' },
-    { key: 'election', label: '선거 솔루션', icon: '🗳️' }
+    { key: 'election', label: '선거 솔루션', icon: '🗳️' },
+    { key: 'axgroup', label: 'AX그룹', icon: '🏢' }
 ];
 
 // DOM 요소
