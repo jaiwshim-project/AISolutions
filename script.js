@@ -14,8 +14,8 @@ const solutions = [
     {
         id: 2,
         title: "AI 선거 솔루션",
-        category: "business",
-        categoryLabel: "비즈니스",
+        category: "election",
+        categoryLabel: "선거",
         icon: "🗳️",
         description: "선거 캠페인을 위한 AI 기반 분석 및 전략 수립 솔루션. 여론 분석, 타겟팅, 메시지 최적화를 지원합니다.",
         tags: ["AI", "선거", "분석", "전략"],
@@ -25,8 +25,8 @@ const solutions = [
     {
         id: 46,
         title: "선거 후보자 비교 분석 리포트 AI",
-        category: "business",
-        categoryLabel: "비즈니스",
+        category: "election",
+        categoryLabel: "선거",
         icon: "⚖️",
         description: "Gemini AI 기반 선거 후보자 비교 분석 플랫폼. PDF 리포트 업로드 시 최대 5명의 후보를 10개 지표로 자동 분석하고 당선 전략 인텔리전스 보고서를 생성합니다.",
         tags: ["선거", "후보자분석", "Gemini", "PDF"],
@@ -36,8 +36,8 @@ const solutions = [
     {
         id: 37,
         title: "일렉션맵AI 선거차량 전략",
-        category: "business",
-        categoryLabel: "비즈니스",
+        category: "election",
+        categoryLabel: "선거",
         icon: "🚗",
         description: "AI 기반 선거 차량 운영 최적화 플랫폼. 유권자 밀집도 히트맵, 차량 경로 최적화, 비용 분석, 경쟁 후보 분석 등 데이터로 선거 유세 전략을 설계합니다.",
         tags: ["AI", "선거", "경로최적화", "데이터분석"],
@@ -47,8 +47,8 @@ const solutions = [
     {
         id: 48,
         title: "V40 정치인 평가 시스템",
-        category: "business",
-        categoryLabel: "비즈니스",
+        category: "election",
+        categoryLabel: "선거",
         icon: "🏛️",
         description: "4개 AI(Claude·ChatGPT·Grok·Gemini)가 정치인을 전문성·청렴성·리더십 등 10개 지표로 독립 평가하는 종합 시스템. 베이지안 점수 계산과 상세 평가 보고서를 생성합니다.",
         tags: ["선거", "정치인평가", "멀티AI", "데이터분석"],
