@@ -670,6 +670,17 @@ const solutions = [
         tags: ["선거", "캠페인", "분석", "AI"],
         status: "active",
         link: "https://10-00-02.vercel.app/index.html"
+    },
+    {
+        id: 61,
+        title: "특허명세서 작성용 바이브코딩",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "⚖️",
+        description: "AI 기반 특허명세서 작성 자동화 솔루션. 바이브코딩 프로세스를 통해 아이디어를 체계적인 특허명세서로 변환하고, 특허청 제출까지 전 과정을 지원합니다.",
+        tags: ["특허", "바이브코딩", "명세서", "자동화"],
+        status: "active",
+        link: "https://50-09-patentvebecodingprocess.vercel.app/"
     }
 ];
 
