@@ -691,7 +691,7 @@ const solutions = [
         description: "AI 기반 출판 콘텐츠 관리 및 배포 플랫폼. 원고 작성부터 출판, 마케팅까지 전 과정을 AI가 자동화하며, 다양한 형식의 콘텐츠 생성과 멀티채널 배포를 지원합니다.",
         tags: ["출판", "콘텐츠관리", "AI자동화", "마케팅"],
         status: "active",
-        link: "https://30-14-k-publishin-hub.vercel.app/"
+        link: "https://30-14-k-pub-hub.vercel.app/"
     }
 ];
 
