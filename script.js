@@ -108,7 +108,7 @@ const solutions = [
         description: "수채화 일러스트와 함께하는 연재 이야기. 논리적인 공대생 할아버지와 감성적인 미대생 할머니의 만남부터 노년까지, 60개 에피소드를 담은 그림 갤러리입니다.",
         tags: ["수채화", "일러스트", "스토리", "갤러리", "연재"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/70-01-GrandPa_Mom/gallery.html"
+        link: "https://70-01-grandpa-mom.vercel.app"
     },
     {
         id: 56,
@@ -681,6 +681,17 @@ const solutions = [
         tags: ["특허", "바이브코딩", "명세서", "자동화"],
         status: "active",
         link: "https://50-09-patentvebecodingprocess.vercel.app/"
+    },
+    {
+        id: 62,
+        title: "K-AI출판허브",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "📖",
+        description: "AI 기반 출판 콘텐츠 관리 및 배포 플랫폼. 원고 작성부터 출판, 마케팅까지 전 과정을 AI가 자동화하며, 다양한 형식의 콘텐츠 생성과 멀티채널 배포를 지원합니다.",
+        tags: ["출판", "콘텐츠관리", "AI자동화", "마케팅"],
+        status: "active",
+        link: "#"
     }
 ];
 
