@@ -636,7 +636,7 @@ body {
     align-items: baseline;
     gap: 8px;
     padding: 5px 12px;
-    font-size: 0.82rem;
+    font-size: 0.94rem;
     color: rgba(255, 255, 255, 0.95);
     border-bottom: 1px solid rgba(139, 92, 246, 0.08);
     transition: all 0.2s ease;
@@ -652,7 +652,7 @@ body {
 
 .cr-no {
     color: rgba(255, 255, 255, 0.45);
-    font-size: 0.72rem;
+    font-size: 0.84rem;
     font-family: 'Inter', monospace;
     white-space: nowrap;
     flex-shrink: 0;
@@ -668,7 +668,7 @@ body {
 
 .cr-date {
     color: rgba(250, 204, 21, 0.7);
-    font-size: 0.72rem;
+    font-size: 0.84rem;
     white-space: nowrap;
     flex-shrink: 0;
 }
