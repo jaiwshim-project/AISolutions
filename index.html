@@ -89,11 +89,15 @@
 
     <!-- 솔루션 리스트 배너 -->
     <section class="solution-list-banner">
-        <h2 class="solution-list-title">플랫폼 리스트 <span class="solution-list-total">63</span></h2>
+        <div class="solution-list-tabs">
+            <button class="solution-list-tab active" data-tab="platform">플랫폼 리스트 <span class="solution-list-total">63</span></button>
+            <button class="solution-list-tab" data-tab="copyright">저작권 리스트 <span class="solution-list-total">23</span></button>
+        </div>
+        <div class="solution-list-tab-content active" id="tab-platform">
         <div class="solution-list-container">
             <div class="solution-list-category">
                 <div class="solution-list-category-title">📚 교육 <span class="solution-list-count">8</span></div>
-                <a href="https://30-11-question-math.vercel.app/" target="_blank" class="solution-list-item">질문수학(Q-Math)</a>
+                <a href="https://qmath.vercel.app/" target="_blank" class="solution-list-item">질문수학(Q-Math)</a>
                 <div class="solution-list-item">AI노벨 문해력5</div>
                 <a href="https://jaiwshim-project.github.io/rqtdw_thinking_OS/" target="_blank" class="solution-list-item">RQTDW AI 트레이너</a>
                 <a href="https://jaiwshim-project.github.io/aitutorhub/" target="_blank" class="solution-list-item">AI Tutor Hub</a>
@@ -170,6 +174,43 @@
                 <a href="https://jaiwshim-project.github.io/01-2-AXBizGroup/index" target="_blank" class="solution-list-item">AX BizGroup CEO 마스터 플랫폼</a>
                 <a href="https://jaiwshim-project.github.io/00-Shim_Platform_Index/" target="_blank" class="solution-list-item">AI 플랫폼 프로젝트 인덱스</a>
             </div>
+        </div>
+        </div>
+        <div class="solution-list-tab-content" id="tab-copyright">
+        <div class="solution-list-container copyright-grid">
+            <div class="solution-list-category">
+                <div class="solution-list-category-title">📝 편집저작물 <span class="solution-list-count">15</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2024-048834</span><span class="cr-title">질문학습AI튜터 학습법</span><span class="cr-date">2024.11.29</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2024-048835</span><span class="cr-title">사진 기반 반려인과 반려견 스토리와 노래 가사 생성 GPT</span><span class="cr-date">2024.11.29</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2024-047628</span><span class="cr-title">질문학습AI튜터 학습법</span><span class="cr-date">2024.11.26</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2024-043694</span><span class="cr-title">AI 기반의 마케팅-세일즈 마스터링</span><span class="cr-date">2024.11.14</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2024-043054</span><span class="cr-title">실시간 양방향 대화형 AIBookTutor</span><span class="cr-date">2024.11.12</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2024-024573</span><span class="cr-title">애완동물 성격 &amp; 행동 유형 진단 솔루션 펫-피비티아이</span><span class="cr-date">2024.07.16</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2023-013408</span><span class="cr-title">메타버스 진로진학직업 설계 체험 캠프</span><span class="cr-date">2023.03.09</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2023-010359</span><span class="cr-title">6 스트롱 진단-80 미래직업-6 미래역량 진단 솔루션</span><span class="cr-date">2023.02.13</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2021-022974</span><span class="cr-title">큐지북 책쓰기</span><span class="cr-date">2021.06.07</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2021-022975</span><span class="cr-title">질문수학(큐지매쓰)</span><span class="cr-date">2021.06.07</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2020-032899</span><span class="cr-title">3색 줄긋기 독서법</span><span class="cr-date">2020.09.24</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2009-004620</span><span class="cr-title">100전 100승 취업 성공 프로젝트</span><span class="cr-date">2009.06.11</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2009-000873</span><span class="cr-title">비즈니스 스토리텔링</span><span class="cr-date">2009.01.23</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2009-000775</span><span class="cr-title">직원 역량 개발과 성장을 위한 코칭 전략(CSECDG)</span><span class="cr-date">2009.01.20</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2009-000490</span><span class="cr-title">이글아이 전략</span><span class="cr-date">2009.01.15</span></div>
+            </div>
+            <div class="solution-list-category">
+                <div class="solution-list-category-title">📖 어문저작물 <span class="solution-list-count">5</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2025-005703</span><span class="cr-title">6위1체 AI 특허 기술의 AI도록과 AI갤러리 솔루션</span><span class="cr-date">2025.02.12</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2024-030793</span><span class="cr-title">Human-PBTI(휴먼-피비티아이) 자료</span><span class="cr-date">2024.09.02</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2024-022385</span><span class="cr-title">마이펫태일 애완동물 백과사전</span><span class="cr-date">2024.06.26</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2024-019595</span><span class="cr-title">진강 리더십</span><span class="cr-date">2024.06.07</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2009-000879</span><span class="cr-title">직원 역량 개발과 성장을 위한 코칭전략(CSECDG)</span><span class="cr-date">2009.01.28</span></div>
+            </div>
+            <div class="solution-list-category">
+                <div class="solution-list-category-title">🎨 미술저작물 <span class="solution-list-count">3</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2009-000872</span><span class="cr-title">비즈니스 스토리텔링</span><span class="cr-date">2009.01.23</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2009-000776</span><span class="cr-title">직원 역량 개발과 성장을 위한 코칭 전략(CSECG)</span><span class="cr-date">2009.01.20</span></div>
+                <div class="copyright-item"><span class="cr-no">C-2009-000465</span><span class="cr-title">이글아이 전략</span><span class="cr-date">2009.01.14</span></div>
+            </div>
+        </div>
         </div>
     </section>
 

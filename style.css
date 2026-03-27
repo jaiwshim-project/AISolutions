@@ -572,6 +572,45 @@ body {
     border-bottom: 1px solid rgba(139, 92, 246, 0.25);
 }
 
+.solution-list-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.solution-list-tab {
+    background: transparent;
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.15rem;
+    font-weight: 800;
+    padding: 8px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: -0.02em;
+}
+
+.solution-list-tab:hover {
+    border-color: rgba(139, 92, 246, 0.6);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.solution-list-tab.active {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: #8b5cf6;
+    color: #fff;
+}
+
+.solution-list-tab-content {
+    display: none;
+}
+
+.solution-list-tab-content.active {
+    display: block;
+}
+
 .solution-list-title {
     text-align: center;
     font-size: 1.3rem;
@@ -583,8 +622,74 @@ body {
 
 .solution-list-total {
     color: #facc15;
-    font-size: 1.3rem;
-    margin-left: 6px;
+    font-size: 1.1rem;
+    margin-left: 4px;
+}
+
+/* 저작권 리스트 */
+.copyright-grid {
+    grid-template-columns: 1fr 1fr 1fr !important;
+}
+
+.copyright-item {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 5px 12px;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.08);
+    transition: all 0.2s ease;
+}
+
+.copyright-item:last-child {
+    border-bottom: none;
+}
+
+.copyright-item:hover {
+    background: rgba(139, 92, 246, 0.1);
+}
+
+.cr-no {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.72rem;
+    font-family: 'Inter', monospace;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.cr-title {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cr-date {
+    color: rgba(250, 204, 21, 0.7);
+    font-size: 0.72rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .copyright-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .copyright-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .solution-list-tabs {
+        gap: 6px;
+    }
+    .solution-list-tab {
+        font-size: 0.95rem;
+        padding: 6px 18px;
+    }
 }
 
 .solution-list-container {

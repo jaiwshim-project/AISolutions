@@ -504,7 +504,7 @@ const solutions = [
         description: "치과위생사협회를 위한 AI 기반 조직진단 솔루션. 조직 현황을 분석하고 발전 방향을 제시합니다.",
         tags: ["치과위생사", "조직진단", "AI", "협회"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/25-Dental-Diagnosis/"
+        link: "https://20-13-survey-diagnosis.vercel.app/"
     },
     {
         id: 32,
@@ -692,6 +692,17 @@ const solutions = [
         tags: ["출판", "콘텐츠관리", "AI자동화", "마케팅"],
         status: "active",
         link: "https://30-14-k-pub-hub.vercel.app/"
+    },
+    {
+        id: 63,
+        title: "선거워룸",
+        category: "election",
+        categoryLabel: "선거",
+        icon: "🚨",
+        description: "선거 캠페인 실시간 모니터링 및 전략 분석 워룸. 여론 동향, 경쟁 분석, 캠페인 효과 측정을 실시간으로 추적하고 즉각적인 전략 조정을 지원합니다.",
+        tags: ["선거", "실시간모니터링", "여론분석", "캠페인전략"],
+        status: "active",
+        link: "https://10-00-02.vercel.app/"
     }
 ];
 
@@ -929,6 +940,18 @@ function init() {
     // 히어로 섹션이 보일 때 카운트업 시작
     setTimeout(animateHeroStats, 500);
 }
+
+// ============================================
+// 솔루션 리스트 탭 전환
+// ============================================
+document.querySelectorAll('.solution-list-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        document.querySelectorAll('.solution-list-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.solution-list-tab-content').forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+    });
+});
 
 // 페이지 로드 시 초기화
 document.addEventListener('DOMContentLoaded', init);
