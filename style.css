@@ -692,6 +692,99 @@ body {
     }
 }
 
+/* ── AX Group Cards ── */
+.axgroup-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.axgroup-card {
+    background: linear-gradient(160deg, rgba(30,20,60,0.95), rgba(15,10,35,0.98));
+    border: 2px solid rgba(139,92,246,0.3);
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    display: flex;
+    flex-direction: column;
+}
+.axgroup-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 48px rgba(139,92,246,0.25), 0 0 0 1px rgba(139,92,246,0.2);
+    border-color: rgba(139,92,246,0.6);
+}
+.axgroup-card-img {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(139,92,246,0.2);
+}
+.axgroup-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.axgroup-card:hover .axgroup-card-img img {
+    transform: scale(1.04);
+}
+.axgroup-card-body {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+.axgroup-card-badge {
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.axgroup-card-title {
+    font-size: 1.15rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #fff;
+}
+.axgroup-card-desc {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+}
+.axgroup-card-stats {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(139,92,246,0.15);
+}
+.axgroup-card-stats span {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(139,92,246,0.9);
+    background: rgba(139,92,246,0.1);
+    border: 1px solid rgba(139,92,246,0.25);
+    padding: 3px 10px;
+    border-radius: 8px;
+}
+@media (max-width: 900px) {
+    .axgroup-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+    .axgroup-grid { grid-template-columns: 1fr; }
+}
+
 .solution-list-container {
     max-width: 1300px;
     margin: 0 auto;
