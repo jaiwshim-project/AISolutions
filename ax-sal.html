@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAL Grid for Software Audit — AI Solutions Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:#b8ccc8;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:20px 0}
+
+.a4-page{width:210mm;min-height:297mm;max-height:297mm;background:linear-gradient(180deg,#e6fffa 0%,#f0fdfa 25%,#fff 50%,#f0fdfa 75%,#e6fffa 100%);border:4px solid #134e4a;border-radius:6px;box-shadow:0 0 0 1.5px #14b8a6,0 12px 48px rgba(19,78,74,0.2);overflow:hidden;display:flex;flex-direction:column;position:relative;font-weight:700}
+
+.top-bar{background:linear-gradient(135deg,#042f2e,#134e4a,#0f766e);padding:11px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:2.5px solid #5eead4;box-shadow:0 2px 12px rgba(19,78,74,0.3)}
+.top-bar a{color:#fff;text-decoration:none;font-size:0.9rem;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.top-bar .visit-btn{background:linear-gradient(135deg,rgba(255,255,255,0.2),rgba(255,255,255,0.1));padding:6px 16px;border-radius:8px;font-weight:800;border:2px solid rgba(255,255,255,0.6);backdrop-filter:blur(4px);transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+.top-bar .visit-btn:hover{background:rgba(255,255,255,0.35);border-color:#fff;box-shadow:0 4px 16px rgba(20,184,166,0.4)}
+
+.hero{text-align:center;padding:14px 24px 12px;position:relative;background:linear-gradient(180deg,rgba(15,118,110,0.03),transparent)}
+.hero::after{content:'';position:absolute;bottom:0;left:24px;right:24px;height:2px;background:linear-gradient(90deg,transparent,#5eead4,#0f766e,#5eead4,transparent)}
+.hero-img{width:100%;max-width:100%;margin:0 auto 10px;border-radius:12px;overflow:hidden;border:3px solid #0f766e;box-shadow:0 8px 28px rgba(19,78,74,0.2),0 0 0 1px rgba(20,184,166,0.3),inset 0 0 20px rgba(15,118,110,0.05)}
+.hero-img img{width:100%;display:block;max-height:99mm;object-fit:cover;object-position:top}
+.badge{display:inline-block;background:linear-gradient(135deg,#99f6e4,#5eead4);font-size:0.72rem;font-weight:800;letter-spacing:0.1em;color:#042f2e;padding:4px 16px;border-radius:14px;border:2px solid #14b8a6;margin-bottom:6px;box-shadow:0 3px 10px rgba(15,118,110,0.15)}
+.hero h1{font-size:1.72rem;font-weight:900;letter-spacing:-0.03em;margin-bottom:6px;color:#0f0f1a}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,#134e4a,#14b8a6,#0f766e);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:0.84rem;color:#1a3a35;line-height:1.6;max-width:580px;margin:0 auto}
+
+.content{flex:1;padding:12px 24px 0}
+
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.stat-card{background:linear-gradient(160deg,#ccfbf1,#99f6e4,#ccfbf1);border:2.5px solid #14b8a6;border-radius:12px;padding:10px 8px;text-align:center;position:relative;overflow:hidden;box-shadow:0 3px 12px rgba(15,118,110,0.1)}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3.5px;background:linear-gradient(90deg,#042f2e,#0f766e,#5eead4,#0f766e,#042f2e)}
+.stat-num{font-size:1.27rem;font-weight:900;color:#134e4a;letter-spacing:-0.03em}
+.stat-label{font-size:0.72rem;color:#1a4a42;margin-top:2px;font-weight:800}
+
+.section-header{background:linear-gradient(135deg,#ccfbf1,#99f6e4,#a7f3d0);border:2.5px solid #14b8a6;border-radius:12px;padding:10px 16px;margin-bottom:12px;box-shadow:0 3px 12px rgba(15,118,110,0.08);position:relative;overflow:hidden}
+.section-header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#042f2e,#14b8a6,#042f2e)}
+.section-title{font-size:1.12rem;font-weight:900;letter-spacing:-0.02em;color:#0f0f1a;margin-bottom:2px}
+.divider{width:40px;height:3px;background:linear-gradient(90deg,#134e4a,#14b8a6);border-radius:4px;margin:4px 0 4px}
+.section-desc{font-size:0.77rem;color:#1a4a42;line-height:1.5;margin:0}
+
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.feature-card{background:linear-gradient(160deg,#f0fdfa,#ccfbf1);border:2.5px solid rgba(15,118,110,0.3);border-radius:12px;padding:12px 14px 12px 18px;position:relative;overflow:hidden;transition:border-color .2s;box-shadow:0 3px 12px rgba(15,118,110,0.06)}
+.feature-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:5px;border-radius:3px 0 0 3px}
+.feature-card:nth-child(1)::before{background:linear-gradient(180deg,#042f2e,#0f766e)}
+.feature-card:nth-child(2)::before{background:linear-gradient(180deg,#134e4a,#14b8a6)}
+.feature-card:nth-child(3)::before{background:linear-gradient(180deg,#0f766e,#5eead4)}
+.feature-card:nth-child(4)::before{background:linear-gradient(180deg,#14b8a6,#99f6e4)}
+.feature-card:nth-child(1){border-color:#0f766e}
+.feature-card:nth-child(2){border-color:#14b8a6}
+.feature-card:nth-child(3){border-color:#5eead4}
+.feature-card:nth-child(4){border-color:#99f6e4}
+.feature-icon{font-size:1.2rem;margin-bottom:4px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#99f6e4,#5eead4);border:2px solid #14b8a6;border-radius:10px;box-shadow:0 3px 8px rgba(15,118,110,0.15)}
+.feature-title{font-size:0.9rem;font-weight:800;margin-bottom:3px;color:#0a2520}
+.feature-desc{font-size:0.72rem;color:#1a3a35;line-height:1.5}
+
+.cta-section{text-align:center;padding:14px 0 14px;display:flex;justify-content:center;gap:12px}
+.cta-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#042f2e,#134e4a,#0f766e);color:#fff;font-weight:800;font-size:0.9rem;padding:10px 28px;border-radius:10px;text-decoration:none;border:2.5px solid #14b8a6;box-shadow:0 6px 24px rgba(19,78,74,0.35),inset 0 1px 0 rgba(255,255,255,0.2);transition:all .2s;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.cta-btn:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(19,78,74,0.45)}
+.pdf-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#1e3a5f,#1d4ed8,#2563eb);color:#fff;font-weight:800;font-size:0.9rem;padding:10px 28px;border-radius:10px;border:2.5px solid #60a5fa;box-shadow:0 6px 24px rgba(37,99,235,0.3),inset 0 1px 0 rgba(255,255,255,0.2);cursor:pointer;transition:all .2s;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.pdf-btn:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(37,99,235,0.45)}
+
+.footer-bar{background:linear-gradient(135deg,#042f2e,#134e4a,#0f766e);border-top:3px solid #5eead4;padding:9px 24px;text-align:center;font-size:0.7rem;color:#fff;font-weight:700;letter-spacing:0.03em;text-shadow:0 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0 2px 8px rgba(0,0,0,0.15)}
+
+@media print{
+  @page{size:A4 portrait;margin:0}
+  html,body{width:210mm;height:297mm;margin:0;padding:0;background:#fff;display:block;min-height:auto;overflow:visible}
+  .a4-page{width:210mm;height:297mm;min-height:297mm;max-height:297mm;margin:0;padding:0;border:4px solid #134e4a;box-shadow:none;border-radius:0;overflow:visible;-webkit-print-color-adjust:exact;print-color-adjust:exact;background:linear-gradient(180deg,#e6fffa 0%,#f0fdfa 25%,#fff 50%,#f0fdfa 75%,#e6fffa 100%)}
+  .cta-section{display:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+@media(max-width:210mm){
+  .a4-page{width:100%;min-height:auto;max-height:none;border-radius:0;border-width:2px}
+  .hero-img img{max-height:180px}
+}
+</style>
+</head>
+<body>
+<div class="a4-page">
+  <div class="top-bar">
+    <a href="index.html" class="back">← AI Solutions Portfolio</a>
+    <a href="https://ai-magic-show-dy0yzs5vs-finder-world.vercel.app/sal_grid_software_audit.html" target="_blank" class="visit-btn">플랫폼 방문 →</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-img"><img src="ax-sal-hero.jpg" alt="SAL Grid for Software Audit"></div>
+    <div class="badge">소프트웨어 감사</div>
+    <h1>SAL Grid <em>Software Audit</em></h1>
+    <p class="hero-sub">완성된 소프트웨어를 자동 분해·분석하고 성능 병목을 탐지하여 ROI 기반 개선 우선순위를 도출하는 SAL-SA 방법론 플랫폼입니다.</p>
+  </section>
+
+  <section class="content">
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-num">$24B</div><div class="stat-label">글로벌 타겟 시장</div></div>
+      <div class="stat-card"><div class="stat-num">9단계</div><div class="stat-label">분석 파이프라인</div></div>
+      <div class="stat-card"><div class="stat-num">3D</div><div class="stat-label">SAL Grid 시각화</div></div>
+      <div class="stat-card"><div class="stat-num">₩150억</div><div class="stat-label">5년 성장 목표</div></div>
+    </div>
+
+    <div class="section-header">
+      <div class="section-title">핵심 기능</div>
+      <div class="divider"></div>
+      <div class="section-desc">기존 소프트웨어를 체계적으로 분해·분석·개선하는 역방향 SAL Grid 엔진</div>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <div class="feature-title">자동 SAL ID 매핑</div>
+        <div class="feature-desc">코드베이스를 스캔하여 모든 컴포넌트에 자동으로 SAL ID를 부여. 수천~수만 개의 모듈·함수·API를 체계적으로 분해</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">성능 병목 탐지</div>
+        <div class="feature-desc">Critical Path 알고리즘으로 시스템 전체의 성능 병목 지점을 자동 식별. 크로스-컴포넌트 연쇄 지연까지 파악</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <div class="feature-title">ROI 기반 우선순위</div>
+        <div class="feature-desc">성능개선효과, 영향범위, 구현용이성을 종합하여 개선 항목의 자동 우선순위를 산출. 데이터 기반 의사결정 지원</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧊</div>
+        <div class="feature-title">3D 시각화 & 리포트</div>
+        <div class="feature-desc">9단계 분석 파이프라인 결과를 3D SAL Grid로 시각화하고 감사 리포트와 개선 로드맵을 자동 생성</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <a href="https://ai-magic-show-dy0yzs5vs-finder-world.vercel.app/sal_grid_software_audit.html" target="_blank" class="cta-btn">SAL Grid 플랫폼 방문하기 →</a>
+    <button class="pdf-btn" onclick="window.print()">PDF 다운로드 ↓</button>
+  </section>
+
+  <div class="footer-bar">© 2026 SAL Grid for Software Audit · AI Platforms Portfolio by 심재우</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AX-On 프로젝트 플랫폼 — AI Solutions Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:#d8c8c0;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:20px 0}
+
+.a4-page{width:210mm;min-height:297mm;max-height:297mm;background:linear-gradient(180deg,#fef2f2 0%,#fff5f0 25%,#fff 50%,#fff5f0 75%,#fef2f2 100%);border:4px solid #991b1b;border-radius:6px;box-shadow:0 0 0 1.5px #f97316,0 12px 48px rgba(153,27,27,0.2);overflow:hidden;display:flex;flex-direction:column;position:relative;font-weight:700}
+
+.top-bar{background:linear-gradient(135deg,#7f1d1d,#991b1b,#dc2626);padding:11px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:2.5px solid #fb923c;box-shadow:0 2px 12px rgba(153,27,27,0.3)}
+.top-bar a{color:#fff;text-decoration:none;font-size:0.9rem;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.top-bar .visit-btn{background:linear-gradient(135deg,rgba(255,255,255,0.2),rgba(255,255,255,0.1));padding:6px 16px;border-radius:8px;font-weight:800;border:2px solid rgba(255,255,255,0.6);backdrop-filter:blur(4px);transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+.top-bar .visit-btn:hover{background:rgba(255,255,255,0.35);border-color:#fff;box-shadow:0 4px 16px rgba(249,115,22,0.4)}
+
+.hero{text-align:center;padding:14px 24px 12px;position:relative;background:linear-gradient(180deg,rgba(220,38,38,0.03),transparent)}
+.hero::after{content:'';position:absolute;bottom:0;left:24px;right:24px;height:2px;background:linear-gradient(90deg,transparent,#fb923c,#dc2626,#fb923c,transparent)}
+.hero-img{width:100%;max-width:100%;margin:0 auto 10px;border-radius:12px;overflow:hidden;border:3px solid #dc2626;box-shadow:0 8px 28px rgba(153,27,27,0.2),0 0 0 1px rgba(249,115,22,0.3),inset 0 0 20px rgba(220,38,38,0.05)}
+.hero-img img{width:100%;display:block;max-height:99mm;object-fit:cover;object-position:top}
+.badge{display:inline-block;background:linear-gradient(135deg,#fecaca,#fdba74);font-size:0.72rem;font-weight:800;letter-spacing:0.1em;color:#7f1d1d;padding:4px 16px;border-radius:14px;border:2px solid #f97316;margin-bottom:6px;box-shadow:0 3px 10px rgba(220,38,38,0.15)}
+.hero h1{font-size:1.72rem;font-weight:900;letter-spacing:-0.03em;margin-bottom:6px;color:#0f0f1a}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,#991b1b,#dc2626,#f97316);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:0.84rem;color:#4a2020;line-height:1.6;max-width:580px;margin:0 auto}
+
+.content{flex:1;padding:12px 24px 0}
+
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.stat-card{background:linear-gradient(160deg,#fee2e2,#fecaca,#fed7aa);border:2.5px solid #f97316;border-radius:12px;padding:10px 8px;text-align:center;position:relative;overflow:hidden;box-shadow:0 3px 12px rgba(220,38,38,0.1)}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3.5px;background:linear-gradient(90deg,#7f1d1d,#dc2626,#fb923c,#dc2626,#7f1d1d)}
+.stat-num{font-size:1.27rem;font-weight:900;color:#991b1b;letter-spacing:-0.03em}
+.stat-label{font-size:0.72rem;color:#5a2020;margin-top:2px;font-weight:800}
+
+.section-header{background:linear-gradient(135deg,#fee2e2,#fecaca,#ffedd5);border:2.5px solid #f97316;border-radius:12px;padding:10px 16px;margin-bottom:12px;box-shadow:0 3px 12px rgba(220,38,38,0.08);position:relative;overflow:hidden}
+.section-header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#7f1d1d,#f97316,#7f1d1d)}
+.section-title{font-size:1.12rem;font-weight:900;letter-spacing:-0.02em;color:#0f0f1a;margin-bottom:2px}
+.divider{width:40px;height:3px;background:linear-gradient(90deg,#991b1b,#f97316);border-radius:4px;margin:4px 0 4px}
+.section-desc{font-size:0.77rem;color:#5a2020;line-height:1.5;margin:0}
+
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.feature-card{background:linear-gradient(160deg,#fff7ed,#fee2e2);border:2.5px solid rgba(220,38,38,0.3);border-radius:12px;padding:12px 14px 12px 18px;position:relative;overflow:hidden;transition:border-color .2s;box-shadow:0 3px 12px rgba(220,38,38,0.06)}
+.feature-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:5px;border-radius:3px 0 0 3px}
+.feature-card:nth-child(1)::before{background:linear-gradient(180deg,#7f1d1d,#dc2626)}
+.feature-card:nth-child(2)::before{background:linear-gradient(180deg,#991b1b,#f97316)}
+.feature-card:nth-child(3)::before{background:linear-gradient(180deg,#dc2626,#fb923c)}
+.feature-card:nth-child(4)::before{background:linear-gradient(180deg,#f97316,#fdba74)}
+.feature-card:nth-child(1){border-color:#dc2626}
+.feature-card:nth-child(2){border-color:#f97316}
+.feature-card:nth-child(3){border-color:#fb923c}
+.feature-card:nth-child(4){border-color:#fdba74}
+.feature-icon{font-size:1.2rem;margin-bottom:4px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fecaca,#fdba74);border:2px solid #f97316;border-radius:10px;box-shadow:0 3px 8px rgba(220,38,38,0.15)}
+.feature-title{font-size:0.9rem;font-weight:800;margin-bottom:3px;color:#3a0a0a}
+.feature-desc{font-size:0.72rem;color:#4a2020;line-height:1.5}
+
+.cta-section{text-align:center;padding:14px 0 14px;display:flex;justify-content:center;gap:12px}
+.cta-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#7f1d1d,#991b1b,#dc2626);color:#fff;font-weight:800;font-size:0.9rem;padding:10px 28px;border-radius:10px;text-decoration:none;border:2.5px solid #f97316;box-shadow:0 6px 24px rgba(153,27,27,0.35),inset 0 1px 0 rgba(255,255,255,0.2);transition:all .2s;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.cta-btn:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(153,27,27,0.45)}
+.pdf-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#1e3a5f,#1d4ed8,#2563eb);color:#fff;font-weight:800;font-size:0.9rem;padding:10px 28px;border-radius:10px;border:2.5px solid #60a5fa;box-shadow:0 6px 24px rgba(37,99,235,0.3),inset 0 1px 0 rgba(255,255,255,0.2);cursor:pointer;transition:all .2s;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.pdf-btn:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(37,99,235,0.45)}
+
+.footer-bar{background:linear-gradient(135deg,#7f1d1d,#991b1b,#dc2626);border-top:3px solid #fb923c;padding:9px 24px;text-align:center;font-size:0.7rem;color:#fff;font-weight:700;letter-spacing:0.03em;text-shadow:0 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0 2px 8px rgba(0,0,0,0.15)}
+
+@media print{
+  @page{size:A4 portrait;margin:0}
+  html,body{width:210mm;height:297mm;margin:0;padding:0;background:#fff;display:block;min-height:auto;overflow:visible}
+  .a4-page{width:210mm;height:297mm;min-height:297mm;max-height:297mm;margin:0;padding:0;border:4px solid #991b1b;box-shadow:none;border-radius:0;overflow:visible;-webkit-print-color-adjust:exact;print-color-adjust:exact;background:linear-gradient(180deg,#fef2f2 0%,#fff5f0 25%,#fff 50%,#fff5f0 75%,#fef2f2 100%)}
+  .cta-section{display:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+@media(max-width:210mm){
+  .a4-page{width:100%;min-height:auto;max-height:none;border-radius:0;border-width:2px}
+  .hero-img img{max-height:180px}
+}
+</style>
+</head>
+<body>
+<div class="a4-page">
+  <div class="top-bar">
+    <a href="index.html" class="back">← AI Solutions Portfolio</a>
+    <a href="https://www.ax-on.net/" target="_blank" class="visit-btn">플랫폼 방문 →</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-img"><img src="ax-on-hero.jpg" alt="AX-On 프로젝트 플랫폼"></div>
+    <div class="badge">AX 프로젝트</div>
+    <h1>AX-On <em>프로젝트 플랫폼</em></h1>
+    <p class="hero-sub">기업 AI 혁신(AX) 프로젝트 중개·협업 플랫폼. AI 전문가 풀을 운영하고 기획부터 실행까지 AX-On과 전문가가 한 팀이 되어 프로젝트를 수행합니다.</p>
+  </section>
+
+  <section class="content">
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-num">100+</div><div class="stat-label">등록 전문가</div></div>
+      <div class="stat-card"><div class="stat-num">5+</div><div class="stat-label">산업 분야</div></div>
+      <div class="stat-card"><div class="stat-num">AI</div><div class="stat-label">전문가 매칭</div></div>
+      <div class="stat-card"><div class="stat-num">원스톱</div><div class="stat-label">기획→실행</div></div>
+    </div>
+
+    <div class="section-header">
+      <div class="section-title">핵심 기능</div>
+      <div class="divider"></div>
+      <div class="section-desc">기업 AX 프로젝트의 발굴부터 실행까지 원스톱으로 지원하는 협업 시스템</div>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🏭</div>
+        <div class="feature-title">기업 프로젝트 확보</div>
+        <div class="feature-desc">제조, 금융, 유통, 물류 등 다양한 산업의 AX 프로젝트를 발굴하고 체계적으로 관리. 기업 니즈에 맞는 프로젝트 설계</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👥</div>
+        <div class="feature-title">전문가 풀 운영</div>
+        <div class="feature-desc">AI 전문가 등록 및 역량 기반 프로필 관리. 프로젝트 요구사항에 최적화된 전문가 팀을 자동 구성하여 매칭</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <div class="feature-title">협업 실행</div>
+        <div class="feature-desc">기획부터 실행까지 AX-On과 AI 전문가가 한 팀이 되어 프로젝트 수행. 체계적 프로젝트 매니지먼트 지원</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <div class="feature-title">전문가 커뮤니티</div>
+        <div class="feature-desc">AI 전문가들 간 네트워킹, 정보 공유, 스킬 교류를 위한 커뮤니티. 지속적 성장과 협업 기회를 제공</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <a href="https://www.ax-on.net/" target="_blank" class="cta-btn">AX-On 플랫폼 방문하기 →</a>
+    <button class="pdf-btn" onclick="window.print()">PDF 다운로드 ↓</button>
+  </section>
+
+  <div class="footer-bar">© 2026 AX-On · AI Platforms Portfolio by 심재우</div>
+</div>
+</body>
+</html>
