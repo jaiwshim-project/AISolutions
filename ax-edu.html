@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AX EDU GROUP — AI Solutions Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:#0a0a1a;color:#fff;min-height:100vh;overflow-x:hidden}
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,26,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(139,92,246,0.2);padding:14px 0}
+.top-bar-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.top-bar a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.88rem;font-weight:600;transition:color .2s}
+.top-bar a:hover{color:#a78bfa}
+.top-bar .back{display:flex;align-items:center;gap:6px}
+.top-bar .visit-btn{background:linear-gradient(135deg,#6d28d9,#a855f7);padding:8px 20px;border-radius:10px;font-weight:700;color:#fff;border:1.5px solid rgba(255,255,255,0.2)}
+.top-bar .visit-btn:hover{opacity:0.9;color:#fff}
+
+.hero{padding:120px 0 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(109,40,217,0.2),transparent 70%);pointer-events:none}
+.hero-img{width:100%;max-width:900px;margin:0 auto 32px;border-radius:20px;overflow:hidden;border:2px solid rgba(139,92,246,0.3);box-shadow:0 20px 60px rgba(109,40,217,0.25)}
+.hero-img img{width:100%;display:block}
+.badge{display:inline-block;background:linear-gradient(135deg,#6d28d9,#a855f7);font-size:0.72rem;font-weight:800;letter-spacing:0.1em;color:#fff;padding:5px 16px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;letter-spacing:-0.03em;margin-bottom:12px}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,#a855f7,#6d28d9);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.7);line-height:1.8;max-width:640px;margin:0 auto}
+
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.section{padding:64px 0}
+.section-title{font-size:1.6rem;font-weight:900;margin-bottom:8px;letter-spacing:-0.02em}
+.section-desc{font-size:0.92rem;color:rgba(255,255,255,0.6);margin-bottom:32px;line-height:1.7}
+.divider{width:60px;height:4px;background:linear-gradient(90deg,#6d28d9,#a855f7);border-radius:4px;margin:12px 0 20px}
+
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px}
+.stat-card{background:linear-gradient(160deg,rgba(109,40,217,0.12),rgba(30,20,60,0.6));border:1.5px solid rgba(139,92,246,0.25);border-radius:16px;padding:24px 20px;text-align:center}
+.stat-num{font-size:2rem;font-weight:900;color:#a855f7;letter-spacing:-0.03em}
+.stat-label{font-size:0.78rem;color:rgba(255,255,255,0.6);margin-top:4px;font-weight:600}
+
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.feature-card{background:linear-gradient(160deg,rgba(30,20,60,0.8),rgba(15,10,35,0.9));border:1.5px solid rgba(139,92,246,0.2);border-radius:16px;padding:28px 24px;transition:border-color .25s,transform .25s}
+.feature-card:hover{border-color:rgba(139,92,246,0.5);transform:translateY(-3px)}
+.feature-icon{font-size:1.8rem;margin-bottom:12px}
+.feature-title{font-size:1.05rem;font-weight:800;margin-bottom:6px}
+.feature-desc{font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.7}
+
+.cta-section{text-align:center;padding:64px 0 80px}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#6d28d9,#a855f7);color:#fff;font-weight:700;font-size:1rem;padding:16px 36px;border-radius:14px;text-decoration:none;border:2px solid rgba(255,255,255,0.2);box-shadow:0 8px 28px rgba(109,40,217,0.35);transition:transform .2s,box-shadow .2s}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(109,40,217,0.45)}
+
+@media(max-width:768px){
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .features-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <a href="index.html" class="back">← AI Solutions Portfolio</a>
+    <a href="https://jaiwshim-project.github.io/10-07-AXEduPlatform/" target="_blank" class="visit-btn">플랫폼 방문 →</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-img"><img src="ax-edu.jpg" alt="AX EDU GROUP"></div>
+    <div class="badge">교육 플랫폼</div>
+    <h1>AX <em>EDU GROUP</em></h1>
+    <p class="hero-sub">AI 전환(AX) 전문가 성장 생태계. 온라인 교육부터 프로젝트 실습, 전문가 인증, 기업 컨설팅까지 완성된 AX 전문가 육성 시스템을 제공합니다.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-num">1,200+</div><div class="stat-label">수강생</div></div>
+      <div class="stat-card"><div class="stat-num">50개</div><div class="stat-label">전문 강의</div></div>
+      <div class="stat-card"><div class="stat-num">100+</div><div class="stat-label">기업 프로젝트</div></div>
+      <div class="stat-card"><div class="stat-num">4단계</div><div class="stat-label">성장 경로</div></div>
+    </div>
+
+    <div class="section-title">핵심 기능</div>
+    <div class="divider"></div>
+    <div class="section-desc">AX EDU GROUP이 제공하는 AI 전환 전문가 육성 시스템의 핵심 모듈</div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <div class="feature-title">온라인 기본 교육</div>
+        <div class="feature-desc">50개 과목, AX 이해 · 컨설팅 과정을 포함한 체계적 온라인 커리큘럼. 언제 어디서나 학습 가능한 자기주도형 AI 전환 교육</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛠️</div>
+        <div class="feature-title">프로젝트 실습</div>
+        <div class="feature-desc">비즈 프로젝트, 사이드 비즈 매칭을 통한 실전 경험. 이론을 넘어 실제 AI 전환 프로젝트에 참여하여 역량을 검증</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏅</div>
+        <div class="feature-title">AX 전문가 인증</div>
+        <div class="feature-desc">러너 → 프랙티셔너 → 스트래티지스트 3단계 인증 체계. 체계적 레벨업 시스템으로 AX 전문가 커리어 구축</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏢</div>
+        <div class="feature-title">기업 AX 프로젝트</div>
+        <div class="feature-desc">실제 기업 AI 전환 컨설팅 및 수익 창출 프로젝트 참여. 기업과 전문가를 연결하는 AX 생태계의 완성</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <a href="https://jaiwshim-project.github.io/10-07-AXEduPlatform/" target="_blank" class="cta-btn">AX EDU 플랫폼 방문하기 →</a>
+  </div>
+</section>
+</body>
+</html>

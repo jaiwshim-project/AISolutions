@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AX BIZ GROUP — AI Solutions Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:#0a0a1a;color:#fff;min-height:100vh;overflow-x:hidden}
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,26,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(26,69,200,0.25);padding:14px 0}
+.top-bar-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.top-bar a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.88rem;font-weight:600;transition:color .2s}
+.top-bar a:hover{color:#818cf8}
+.top-bar .back{display:flex;align-items:center;gap:6px}
+.top-bar .visit-btn{background:linear-gradient(135deg,#1a45c8,#4338ca);padding:8px 20px;border-radius:10px;font-weight:700;color:#fff;border:1.5px solid rgba(255,255,255,0.2)}
+.top-bar .visit-btn:hover{opacity:0.9;color:#fff}
+
+.hero{padding:120px 0 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(26,69,200,0.18),transparent 70%);pointer-events:none}
+.hero-img{width:100%;max-width:900px;margin:0 auto 32px;border-radius:20px;overflow:hidden;border:2px solid rgba(67,56,202,0.3);box-shadow:0 20px 60px rgba(26,69,200,0.22)}
+.hero-img img{width:100%;display:block}
+.badge{display:inline-block;background:linear-gradient(135deg,#1a45c8,#4338ca);font-size:0.72rem;font-weight:800;letter-spacing:0.1em;color:#fff;padding:5px 16px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;letter-spacing:-0.03em;margin-bottom:12px}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,#818cf8,#4338ca);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.7);line-height:1.8;max-width:640px;margin:0 auto}
+
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.section{padding:64px 0}
+.section-title{font-size:1.6rem;font-weight:900;margin-bottom:8px;letter-spacing:-0.02em}
+.section-desc{font-size:0.92rem;color:rgba(255,255,255,0.6);margin-bottom:32px;line-height:1.7}
+.divider{width:60px;height:4px;background:linear-gradient(90deg,#1a45c8,#4338ca);border-radius:4px;margin:12px 0 20px}
+
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px}
+.stat-card{background:linear-gradient(160deg,rgba(26,69,200,0.1),rgba(15,15,40,0.6));border:1.5px solid rgba(67,56,202,0.25);border-radius:16px;padding:24px 20px;text-align:center}
+.stat-num{font-size:2rem;font-weight:900;color:#818cf8;letter-spacing:-0.03em}
+.stat-label{font-size:0.78rem;color:rgba(255,255,255,0.6);margin-top:4px;font-weight:600}
+
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.feature-card{background:linear-gradient(160deg,rgba(20,18,50,0.8),rgba(10,10,35,0.9));border:1.5px solid rgba(67,56,202,0.2);border-radius:16px;padding:28px 24px;transition:border-color .25s,transform .25s}
+.feature-card:hover{border-color:rgba(67,56,202,0.5);transform:translateY(-3px)}
+.feature-icon{font-size:1.8rem;margin-bottom:12px}
+.feature-title{font-size:1.05rem;font-weight:800;margin-bottom:6px}
+.feature-desc{font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.7}
+
+.cta-section{text-align:center;padding:64px 0 80px}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1a45c8,#4338ca);color:#fff;font-weight:700;font-size:1rem;padding:16px 36px;border-radius:14px;text-decoration:none;border:2px solid rgba(255,255,255,0.2);box-shadow:0 8px 28px rgba(26,69,200,0.3);transition:transform .2s,box-shadow .2s}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(26,69,200,0.4)}
+
+@media(max-width:768px){
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .features-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <a href="index.html" class="back">← AI Solutions Portfolio</a>
+    <a href="https://jaiwshim-project.github.io/01-2-AXBizGroup/" target="_blank" class="visit-btn">플랫폼 방문 →</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-img"><img src="ax-biz.jpg" alt="AX BIZ GROUP"></div>
+    <div class="badge">경영 플랫폼</div>
+    <h1>AX <em>BIZ GROUP</em></h1>
+    <p class="hero-sub">AI 전문 그룹의 전략·운영·재무·팀을 하나의 대시보드에서 실시간으로 관리하는 CEO 마스터 플랫폼 v2.0. 데이터 기반 경영 의사결정을 지원합니다.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-num">18</div><div class="stat-label">진행 프로젝트</div></div>
+      <div class="stat-card"><div class="stat-num">4.2억</div><div class="stat-label">이달 예상 매출</div></div>
+      <div class="stat-card"><div class="stat-num">247</div><div class="stat-label">커뮤니티 멤버</div></div>
+      <div class="stat-card"><div class="stat-num">38%</div><div class="stat-label">AI 플랫폼 목표</div></div>
+    </div>
+
+    <div class="section-title">핵심 기능</div>
+    <div class="divider"></div>
+    <div class="section-desc">CEO가 한눈에 그룹 전체를 파악하고 의사결정할 수 있는 통합 경영 대시보드</div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🗺️</div>
+        <div class="feature-title">전략 맵</div>
+        <div class="feature-desc">그룹 전체의 비전, 미션, 핵심 전략을 시각화하여 조직 방향성을 한눈에 파악. OKR 기반 목표 관리 및 진척도 추적</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💼</div>
+        <div class="feature-title">비즈니스 파이프라인</div>
+        <div class="feature-desc">영업 기회부터 계약 체결까지 파이프라인 전체를 관리. 단계별 전환율, 예상 매출, 우선순위를 실시간 모니터링</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <div class="feature-title">재무 · 성과 분석</div>
+        <div class="feature-desc">매출, 비용, 수익률을 실시간 대시보드로 시각화. 프로젝트별·부서별 성과 분석으로 데이터 기반 경영 의사결정</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">실행 우선순위</div>
+        <div class="feature-desc">긴급 액션, 이번 주 마감, 의사결정 대기 항목을 우선순위별로 정리. CEO가 가장 중요한 것에 집중할 수 있도록 지원</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <a href="https://jaiwshim-project.github.io/01-2-AXBizGroup/" target="_blank" class="cta-btn">AX BIZ 플랫폼 방문하기 →</a>
+  </div>
+</section>
+</body>
+</html>
