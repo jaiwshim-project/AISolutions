@@ -9,7 +9,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',system-ui,sans-serif;background:#e8e8e8;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:20px 0}
 
-.a4-page{width:210mm;min-height:297mm;max-height:297mm;background:linear-gradient(180deg,#faf8ff 0%,#fff 40%,#f8f5ff 100%);border:3px solid #6d28d9;border-radius:6px;box-shadow:0 8px 40px rgba(0,0,0,0.15),inset 0 0 0 1px rgba(109,40,217,0.08);overflow:hidden;display:flex;flex-direction:column;position:relative}
+.a4-page{width:210mm;min-height:297mm;max-height:297mm;background:linear-gradient(180deg,#faf8ff 0%,#fff 40%,#f8f5ff 100%);border:3px solid #6d28d9;border-radius:6px;box-shadow:0 8px 40px rgba(0,0,0,0.15),inset 0 0 0 1px rgba(109,40,217,0.08);overflow:hidden;display:flex;flex-direction:column;position:relative;font-weight:700}
 
 .top-bar{background:linear-gradient(135deg,#4c1d95,#6d28d9,#7c3aed);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #a855f7}
 .top-bar a{color:#fff;text-decoration:none;font-size:0.9rem;font-weight:600}
@@ -59,11 +59,17 @@ body{font-family:'Inter',system-ui,sans-serif;background:#e8e8e8;display:flex;ju
 @media print{
   @page{size:A4 portrait;margin:0}
   body{background:#fff;padding:0;min-height:auto}
-  .a4-page{width:100%;min-height:100vh;max-height:100vh;border:none;box-shadow:none;border-radius:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .top-bar,.cta-section{display:none}
-  .hero-img{box-shadow:none;border:2px solid #6d28d9}
+  .a4-page{width:210mm;min-height:297mm;max-height:297mm;border:3px solid #6d28d9;box-shadow:none;border-radius:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .cta-section{display:none}
+  .top-bar{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .hero-img{border:2.5px solid rgba(109,40,217,0.3)}
   .stat-card{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .stat-card::before{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .section-header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .feature-card{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .feature-card::before{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .feature-icon{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .badge{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .footer-bar{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 
