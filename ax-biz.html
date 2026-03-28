@@ -7,71 +7,90 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',system-ui,sans-serif;background:linear-gradient(180deg,#f5f7ff 0%,#fff 30%,#f8f9ff 100%);color:#1a1a2e;min-height:100vh;overflow-x:hidden}
-.top-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(26,69,200,0.15);padding:14px 0}
-.top-bar-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-.top-bar a{color:#3a3a5c;text-decoration:none;font-size:0.88rem;font-weight:600;transition:color .2s}
-.top-bar a:hover{color:#1a45c8}
-.top-bar .back{display:flex;align-items:center;gap:6px}
-.top-bar .visit-btn{background:linear-gradient(135deg,#1a45c8,#4338ca);padding:8px 20px;border-radius:10px;font-weight:700;color:#fff;border:1.5px solid rgba(255,255,255,0.2)}
-.top-bar .visit-btn:hover{opacity:0.9;color:#fff}
+body{font-family:'Inter',system-ui,sans-serif;background:#c8cdd8;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:20px 0}
 
-.hero{padding:120px 0 60px;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(26,69,200,0.08),transparent 70%);pointer-events:none}
-.hero-img{width:100%;max-width:900px;margin:0 auto 32px;border-radius:20px;overflow:hidden;border:2px solid rgba(26,69,200,0.15);box-shadow:0 20px 60px rgba(26,69,200,0.1)}
-.hero-img img{width:100%;display:block}
-.badge{display:inline-block;background:linear-gradient(135deg,#e8edff,#dde4ff);font-size:0.72rem;font-weight:800;letter-spacing:0.1em;color:#1a45c8;padding:5px 16px;border-radius:20px;border:1px solid rgba(26,69,200,0.2);margin-bottom:16px}
-.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;letter-spacing:-0.03em;margin-bottom:12px;color:#1a1a2e}
-.hero h1 em{font-style:normal;background:linear-gradient(135deg,#1a45c8,#4338ca);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-sub{font-size:1.05rem;color:#5a5a7a;line-height:1.8;max-width:640px;margin:0 auto}
+.a4-page{width:210mm;min-height:297mm;max-height:297mm;background:linear-gradient(180deg,#e8edff 0%,#eef1ff 25%,#fff 50%,#eef1ff 75%,#e8edff 100%);border:4px solid #312e81;border-radius:6px;box-shadow:0 0 0 1.5px #6366f1,0 12px 48px rgba(49,46,129,0.2);overflow:hidden;display:flex;flex-direction:column;position:relative;font-weight:700}
 
-.container{max-width:1100px;margin:0 auto;padding:0 24px}
-.section{padding:64px 0}
-.section-title{font-size:1.6rem;font-weight:900;margin-bottom:8px;letter-spacing:-0.02em;color:#1a1a2e}
-.section-desc{font-size:0.92rem;color:#5a5a7a;margin-bottom:32px;line-height:1.7}
-.divider{width:60px;height:4px;background:linear-gradient(90deg,#1a45c8,#4338ca);border-radius:4px;margin:12px 0 20px}
+.top-bar{background:linear-gradient(135deg,#1e1b4b,#312e81,#4338ca);padding:11px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:2.5px solid #818cf8;box-shadow:0 2px 12px rgba(49,46,129,0.3)}
+.top-bar a{color:#fff;text-decoration:none;font-size:0.9rem;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.top-bar .visit-btn{background:linear-gradient(135deg,rgba(255,255,255,0.2),rgba(255,255,255,0.1));padding:6px 16px;border-radius:8px;font-weight:800;border:2px solid rgba(255,255,255,0.6);backdrop-filter:blur(4px);transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+.top-bar .visit-btn:hover{background:rgba(255,255,255,0.35);border-color:#fff;box-shadow:0 4px 16px rgba(99,102,241,0.4)}
 
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px}
-.stat-card{background:linear-gradient(160deg,#fff,#f6f8ff);border:1.5px solid rgba(26,69,200,0.15);border-radius:16px;padding:24px 20px;text-align:center;box-shadow:0 2px 12px rgba(26,69,200,0.06)}
-.stat-num{font-size:2rem;font-weight:900;color:#1a45c8;letter-spacing:-0.03em}
-.stat-label{font-size:0.78rem;color:#6a6a8a;margin-top:4px;font-weight:600}
+.hero{text-align:center;padding:14px 24px 12px;position:relative;background:linear-gradient(180deg,rgba(67,56,202,0.03),transparent)}
+.hero::after{content:'';position:absolute;bottom:0;left:24px;right:24px;height:2px;background:linear-gradient(90deg,transparent,#818cf8,#4338ca,#818cf8,transparent)}
+.hero-img{width:100%;max-width:100%;margin:0 auto 10px;border-radius:12px;overflow:hidden;border:3px solid #4338ca;box-shadow:0 8px 28px rgba(49,46,129,0.2),0 0 0 1px rgba(99,102,241,0.3),inset 0 0 20px rgba(67,56,202,0.05)}
+.hero-img img{width:100%;display:block;max-height:99mm;object-fit:cover;object-position:top}
+.badge{display:inline-block;background:linear-gradient(135deg,#c7d2fe,#a5b4fc);font-size:0.72rem;font-weight:800;letter-spacing:0.1em;color:#1e1b4b;padding:4px 16px;border-radius:14px;border:2px solid #6366f1;margin-bottom:6px;box-shadow:0 3px 10px rgba(67,56,202,0.15)}
+.hero h1{font-size:1.72rem;font-weight:900;letter-spacing:-0.03em;margin-bottom:6px;color:#0f0f1a}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,#312e81,#6366f1,#4338ca);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:0.84rem;color:#1e1b4b;line-height:1.6;max-width:580px;margin:0 auto}
 
-.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.feature-card{background:linear-gradient(160deg,#fff,#f8f9ff);border:1.5px solid rgba(26,69,200,0.12);border-radius:16px;padding:28px 24px;transition:border-color .25s,transform .25s,box-shadow .25s;box-shadow:0 2px 12px rgba(26,69,200,0.05)}
-.feature-card:hover{border-color:rgba(26,69,200,0.35);transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,69,200,0.1)}
-.feature-icon{width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e8edff,#dde4ff);border:1.5px solid rgba(26,69,200,0.15);border-radius:14px;font-size:1.5rem;margin-bottom:12px}
-.feature-title{font-size:1.05rem;font-weight:800;margin-bottom:6px;color:#1a1a2e}
-.feature-desc{font-size:0.82rem;color:#5a5a7a;line-height:1.7}
+.content{flex:1;padding:12px 24px 0}
 
-.cta-section{text-align:center;padding:64px 0 80px}
-.cta-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1a45c8,#4338ca);color:#fff;font-weight:700;font-size:1rem;padding:16px 36px;border-radius:14px;text-decoration:none;border:2px solid rgba(255,255,255,0.2);box-shadow:0 8px 28px rgba(26,69,200,0.2);transition:transform .2s,box-shadow .2s}
-.cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(26,69,200,0.3)}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.stat-card{background:linear-gradient(160deg,#e0e7ff,#c7d2fe,#e0e7ff);border:2.5px solid #6366f1;border-radius:12px;padding:10px 8px;text-align:center;position:relative;overflow:hidden;box-shadow:0 3px 12px rgba(67,56,202,0.1)}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3.5px;background:linear-gradient(90deg,#1e1b4b,#4338ca,#818cf8,#4338ca,#1e1b4b)}
+.stat-num{font-size:1.27rem;font-weight:900;color:#312e81;letter-spacing:-0.03em}
+.stat-label{font-size:0.72rem;color:#2e2a5e;margin-top:2px;font-weight:800}
 
-@media(max-width:768px){
-  .stats-row{grid-template-columns:repeat(2,1fr)}
-  .features-grid{grid-template-columns:1fr}
+.section-header{background:linear-gradient(135deg,#e0e7ff,#c7d2fe,#ddd6fe);border:2.5px solid #6366f1;border-radius:12px;padding:10px 16px;margin-bottom:12px;box-shadow:0 3px 12px rgba(67,56,202,0.08);position:relative;overflow:hidden}
+.section-header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1e1b4b,#6366f1,#1e1b4b)}
+.section-title{font-size:1.12rem;font-weight:900;letter-spacing:-0.02em;color:#0f0f1a;margin-bottom:2px}
+.divider{width:40px;height:3px;background:linear-gradient(90deg,#312e81,#6366f1);border-radius:4px;margin:4px 0 4px}
+.section-desc{font-size:0.77rem;color:#2e2a5e;line-height:1.5;margin:0}
+
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.feature-card{background:linear-gradient(160deg,#eef2ff,#e0e7ff);border:2.5px solid rgba(67,56,202,0.3);border-radius:12px;padding:12px 14px 12px 18px;position:relative;overflow:hidden;transition:border-color .2s;box-shadow:0 3px 12px rgba(67,56,202,0.06)}
+.feature-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:5px;border-radius:3px 0 0 3px}
+.feature-card:nth-child(1)::before{background:linear-gradient(180deg,#1e1b4b,#4338ca)}
+.feature-card:nth-child(2)::before{background:linear-gradient(180deg,#312e81,#6366f1)}
+.feature-card:nth-child(3)::before{background:linear-gradient(180deg,#4338ca,#818cf8)}
+.feature-card:nth-child(4)::before{background:linear-gradient(180deg,#6366f1,#a5b4fc)}
+.feature-card:nth-child(1){border-color:#4338ca}
+.feature-card:nth-child(2){border-color:#6366f1}
+.feature-card:nth-child(3){border-color:#818cf8}
+.feature-card:nth-child(4){border-color:#a5b4fc}
+.feature-icon{font-size:1.2rem;margin-bottom:4px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#c7d2fe,#a5b4fc);border:2px solid #6366f1;border-radius:10px;box-shadow:0 3px 8px rgba(67,56,202,0.15)}
+.feature-title{font-size:0.9rem;font-weight:800;margin-bottom:3px;color:#1a1540}
+.feature-desc{font-size:0.72rem;color:#1e1b4b;line-height:1.5}
+
+.cta-section{text-align:center;padding:14px 0 14px;display:flex;justify-content:center;gap:12px}
+.cta-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#1e1b4b,#312e81,#4338ca);color:#fff;font-weight:800;font-size:0.9rem;padding:10px 28px;border-radius:10px;text-decoration:none;border:2.5px solid #6366f1;box-shadow:0 6px 24px rgba(49,46,129,0.35),inset 0 1px 0 rgba(255,255,255,0.2);transition:all .2s;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.cta-btn:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(49,46,129,0.45)}
+.pdf-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#1e3a5f,#1d4ed8,#2563eb);color:#fff;font-weight:800;font-size:0.9rem;padding:10px 28px;border-radius:10px;border:2.5px solid #60a5fa;box-shadow:0 6px 24px rgba(37,99,235,0.3),inset 0 1px 0 rgba(255,255,255,0.2);cursor:pointer;transition:all .2s;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.pdf-btn:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(37,99,235,0.45)}
+
+.footer-bar{background:linear-gradient(135deg,#1e1b4b,#312e81,#4338ca);border-top:3px solid #818cf8;padding:9px 24px;text-align:center;font-size:0.7rem;color:#fff;font-weight:700;letter-spacing:0.03em;text-shadow:0 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0 2px 8px rgba(0,0,0,0.15)}
+
+@media print{
+  @page{size:A4 portrait;margin:0}
+  html,body{width:210mm;height:297mm;margin:0;padding:0;background:#fff;display:block;min-height:auto;overflow:visible}
+  .a4-page{width:210mm;height:297mm;min-height:297mm;max-height:297mm;margin:0;padding:0;border:4px solid #312e81;box-shadow:none;border-radius:0;overflow:visible;-webkit-print-color-adjust:exact;print-color-adjust:exact;background:linear-gradient(180deg,#e8edff 0%,#eef1ff 25%,#fff 50%,#eef1ff 75%,#e8edff 100%)}
+  .cta-section{display:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+@media(max-width:210mm){
+  .a4-page{width:100%;min-height:auto;max-height:none;border-radius:0;border-width:2px}
+  .hero-img img{max-height:180px}
 }
 </style>
 </head>
 <body>
-<div class="top-bar">
-  <div class="top-bar-inner">
+<div class="a4-page">
+  <div class="top-bar">
     <a href="index.html" class="back">← AI Solutions Portfolio</a>
     <a href="https://jaiwshim-project.github.io/01-2-AXBizGroup/" target="_blank" class="visit-btn">플랫폼 방문 →</a>
   </div>
-</div>
 
-<section class="hero">
-  <div class="container">
+  <section class="hero">
     <div class="hero-img"><img src="ax-biz-hero.jpg" alt="AX BIZ GROUP"></div>
     <div class="badge">경영 플랫폼</div>
     <h1>AX <em>BIZ GROUP</em></h1>
     <p class="hero-sub">AI 전문 그룹의 전략·운영·재무·팀을 하나의 대시보드에서 실시간으로 관리하는 CEO 마스터 플랫폼 v2.0. 데이터 기반 경영 의사결정을 지원합니다.</p>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="container">
+  <section class="content">
     <div class="stats-row">
       <div class="stat-card"><div class="stat-num">18</div><div class="stat-label">진행 프로젝트</div></div>
       <div class="stat-card"><div class="stat-num">4.2억</div><div class="stat-label">이달 예상 매출</div></div>
@@ -79,9 +98,11 @@ body{font-family:'Inter',system-ui,sans-serif;background:linear-gradient(180deg,
       <div class="stat-card"><div class="stat-num">38%</div><div class="stat-label">AI 플랫폼 목표</div></div>
     </div>
 
-    <div class="section-title">핵심 기능</div>
-    <div class="divider"></div>
-    <div class="section-desc">CEO가 한눈에 그룹 전체를 파악하고 의사결정할 수 있는 통합 경영 대시보드</div>
+    <div class="section-header">
+      <div class="section-title">핵심 기능</div>
+      <div class="divider"></div>
+      <div class="section-desc">CEO가 한눈에 그룹 전체를 파악하고 의사결정할 수 있는 통합 경영 대시보드</div>
+    </div>
 
     <div class="features-grid">
       <div class="feature-card">
@@ -105,13 +126,14 @@ body{font-family:'Inter',system-ui,sans-serif;background:linear-gradient(180deg,
         <div class="feature-desc">긴급 액션, 이번 주 마감, 의사결정 대기 항목을 우선순위별로 정리. CEO가 가장 중요한 것에 집중할 수 있도록 지원</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="cta-section">
-  <div class="container">
+  <section class="cta-section">
     <a href="https://jaiwshim-project.github.io/01-2-AXBizGroup/" target="_blank" class="cta-btn">AX BIZ 플랫폼 방문하기 →</a>
-  </div>
-</section>
+    <button class="pdf-btn" onclick="window.print()">PDF 다운로드 ↓</button>
+  </section>
+
+  <div class="footer-bar">© 2026 AX BIZ GROUP · AI Platforms Portfolio by 심재우</div>
+</div>
 </body>
 </html>
