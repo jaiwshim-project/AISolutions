@@ -7,71 +7,90 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',system-ui,sans-serif;background:linear-gradient(180deg,#f5fbff 0%,#fff 30%,#f8fcff 100%);color:#1a1a2e;min-height:100vh;overflow-x:hidden}
-.top-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(14,165,233,0.12);padding:14px 0}
-.top-bar-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-.top-bar a{color:#1a1a2e;text-decoration:none;font-size:0.88rem;font-weight:600;transition:color .2s}
-.top-bar a:hover{color:#0ea5e9}
-.top-bar .back{display:flex;align-items:center;gap:6px}
-.top-bar .visit-btn{background:linear-gradient(135deg,#0ea5e9,#06b6d4);padding:8px 20px;border-radius:10px;font-weight:700;color:#fff;border:1.5px solid rgba(255,255,255,0.2)}
-.top-bar .visit-btn:hover{opacity:0.9;color:#fff}
+body{font-family:'Inter',system-ui,sans-serif;background:#c8dce8;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:20px 0}
 
-.hero{padding:120px 0 60px;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(14,165,233,0.08),transparent 70%);pointer-events:none}
-.hero-img{width:100%;max-width:900px;margin:0 auto 32px;border-radius:20px;overflow:hidden;border:2px solid rgba(14,165,233,0.15);box-shadow:0 20px 60px rgba(14,165,233,0.1)}
-.hero-img img{width:100%;display:block}
-.badge{display:inline-block;background:linear-gradient(135deg,#e8f7ff,#ddf2ff);font-size:0.72rem;font-weight:800;letter-spacing:0.1em;color:#0ea5e9;padding:5px 16px;border-radius:20px;border:1px solid rgba(14,165,233,0.15);margin-bottom:16px}
-.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;letter-spacing:-0.03em;margin-bottom:12px;color:#1a1a2e}
-.hero h1 em{font-style:normal;background:linear-gradient(135deg,#0ea5e9,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-sub{font-size:1.05rem;color:#5a5a7a;line-height:1.8;max-width:640px;margin:0 auto}
+.a4-page{width:210mm;min-height:297mm;max-height:297mm;background:linear-gradient(180deg,#eaf6ff 0%,#f5fbff 25%,#fff 50%,#f5fbff 75%,#eaf6ff 100%);border:4px solid #0369a1;border-radius:6px;box-shadow:0 0 0 1.5px #38bdf8,0 12px 48px rgba(3,105,161,0.2);overflow:hidden;display:flex;flex-direction:column;position:relative;font-weight:700}
 
-.container{max-width:1100px;margin:0 auto;padding:0 24px}
-.section{padding:64px 0}
-.section-title{font-size:1.6rem;font-weight:900;margin-bottom:8px;letter-spacing:-0.02em;color:#1a1a2e}
-.section-desc{font-size:0.92rem;color:#5a5a7a;margin-bottom:32px;line-height:1.7}
-.divider{width:60px;height:4px;background:linear-gradient(90deg,#0ea5e9,#06b6d4);border-radius:4px;margin:12px 0 20px}
+.top-bar{background:linear-gradient(135deg,#0c4a6e,#0369a1,#0ea5e9);padding:11px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:2.5px solid #7dd3fc;box-shadow:0 2px 12px rgba(3,105,161,0.3)}
+.top-bar a{color:#fff;text-decoration:none;font-size:0.9rem;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.top-bar .visit-btn{background:linear-gradient(135deg,rgba(255,255,255,0.2),rgba(255,255,255,0.1));padding:6px 16px;border-radius:8px;font-weight:800;border:2px solid rgba(255,255,255,0.6);backdrop-filter:blur(4px);transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+.top-bar .visit-btn:hover{background:rgba(255,255,255,0.35);border-color:#fff;box-shadow:0 4px 16px rgba(14,165,233,0.4)}
 
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px}
-.stat-card{background:linear-gradient(160deg,#fff,#f6fcff);border:1.5px solid rgba(14,165,233,0.15);border-radius:16px;padding:24px 20px;text-align:center;box-shadow:0 4px 16px rgba(14,165,233,0.06)}
-.stat-num{font-size:2rem;font-weight:900;color:#0ea5e9;letter-spacing:-0.03em}
-.stat-label{font-size:0.78rem;color:#6a6a8a;margin-top:4px;font-weight:600}
+.hero{text-align:center;padding:14px 24px 12px;position:relative;background:linear-gradient(180deg,rgba(14,165,233,0.03),transparent)}
+.hero::after{content:'';position:absolute;bottom:0;left:24px;right:24px;height:2px;background:linear-gradient(90deg,transparent,#7dd3fc,#0ea5e9,#7dd3fc,transparent)}
+.hero-img{width:100%;max-width:100%;margin:0 auto 10px;border-radius:12px;overflow:hidden;border:3px solid #0ea5e9;box-shadow:0 8px 28px rgba(3,105,161,0.2),0 0 0 1px rgba(56,189,248,0.3),inset 0 0 20px rgba(14,165,233,0.05)}
+.hero-img img{width:100%;display:block;max-height:99mm;object-fit:cover;object-position:top}
+.badge{display:inline-block;background:linear-gradient(135deg,#bae6fd,#7dd3fc);font-size:0.72rem;font-weight:800;letter-spacing:0.1em;color:#0c4a6e;padding:4px 16px;border-radius:14px;border:2px solid #38bdf8;margin-bottom:6px;box-shadow:0 3px 10px rgba(14,165,233,0.15)}
+.hero h1{font-size:1.72rem;font-weight:900;letter-spacing:-0.03em;margin-bottom:6px;color:#0f0f1a}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,#0369a1,#0ea5e9,#06b6d4);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:0.84rem;color:#1e3a5f;line-height:1.6;max-width:580px;margin:0 auto}
 
-.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.feature-card{background:linear-gradient(160deg,#fff,#f8fcff);border:1.5px solid rgba(14,165,233,0.12);border-radius:16px;padding:28px 24px;transition:border-color .25s,transform .25s,box-shadow .25s;box-shadow:0 4px 16px rgba(14,165,233,0.04)}
-.feature-card:hover{border-color:rgba(14,165,233,0.35);transform:translateY(-3px);box-shadow:0 12px 32px rgba(14,165,233,0.1)}
-.feature-icon{width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:12px;background:linear-gradient(135deg,#e8f7ff,#ddf2ff);border:1.5px solid rgba(14,165,233,0.15);border-radius:14px}
-.feature-title{font-size:1.05rem;font-weight:800;margin-bottom:6px;color:#1a1a2e}
-.feature-desc{font-size:0.82rem;color:#5a5a7a;line-height:1.7}
+.content{flex:1;padding:12px 24px 0}
 
-.cta-section{text-align:center;padding:64px 0 80px}
-.cta-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#0ea5e9,#06b6d4);color:#fff;font-weight:700;font-size:1rem;padding:16px 36px;border-radius:14px;text-decoration:none;border:2px solid rgba(255,255,255,0.2);box-shadow:0 8px 28px rgba(14,165,233,0.2);transition:transform .2s,box-shadow .2s}
-.cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(14,165,233,0.3)}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.stat-card{background:linear-gradient(160deg,#e0f2fe,#bae6fd,#e0f2fe);border:2.5px solid #38bdf8;border-radius:12px;padding:10px 8px;text-align:center;position:relative;overflow:hidden;box-shadow:0 3px 12px rgba(14,165,233,0.1)}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3.5px;background:linear-gradient(90deg,#0c4a6e,#0ea5e9,#7dd3fc,#0ea5e9,#0c4a6e)}
+.stat-num{font-size:1.27rem;font-weight:900;color:#0369a1;letter-spacing:-0.03em}
+.stat-label{font-size:0.72rem;color:#164e63;margin-top:2px;font-weight:800}
 
-@media(max-width:768px){
-  .stats-row{grid-template-columns:repeat(2,1fr)}
-  .features-grid{grid-template-columns:1fr}
+.section-header{background:linear-gradient(135deg,#e0f2fe,#bae6fd,#cff2f8);border:2.5px solid #38bdf8;border-radius:12px;padding:10px 16px;margin-bottom:12px;box-shadow:0 3px 12px rgba(14,165,233,0.08);position:relative;overflow:hidden}
+.section-header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0c4a6e,#38bdf8,#0c4a6e)}
+.section-title{font-size:1.12rem;font-weight:900;letter-spacing:-0.02em;color:#0f0f1a;margin-bottom:2px}
+.divider{width:40px;height:3px;background:linear-gradient(90deg,#0369a1,#0ea5e9);border-radius:4px;margin:4px 0 4px}
+.section-desc{font-size:0.77rem;color:#164e63;line-height:1.5;margin:0}
+
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.feature-card{background:linear-gradient(160deg,#f0f9ff,#e0f2fe);border:2.5px solid rgba(14,165,233,0.3);border-radius:12px;padding:12px 14px 12px 18px;position:relative;overflow:hidden;transition:border-color .2s;box-shadow:0 3px 12px rgba(14,165,233,0.06)}
+.feature-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:5px;border-radius:3px 0 0 3px}
+.feature-card:nth-child(1)::before{background:linear-gradient(180deg,#0c4a6e,#0ea5e9)}
+.feature-card:nth-child(2)::before{background:linear-gradient(180deg,#0369a1,#38bdf8)}
+.feature-card:nth-child(3)::before{background:linear-gradient(180deg,#0ea5e9,#7dd3fc)}
+.feature-card:nth-child(4)::before{background:linear-gradient(180deg,#38bdf8,#bae6fd)}
+.feature-card:nth-child(1){border-color:#0ea5e9}
+.feature-card:nth-child(2){border-color:#38bdf8}
+.feature-card:nth-child(3){border-color:#7dd3fc}
+.feature-card:nth-child(4){border-color:#93c5fd}
+.feature-icon{font-size:1.2rem;margin-bottom:4px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#bae6fd,#7dd3fc);border:2px solid #38bdf8;border-radius:10px;box-shadow:0 3px 8px rgba(14,165,233,0.15)}
+.feature-title{font-size:0.9rem;font-weight:800;margin-bottom:3px;color:#0c3547}
+.feature-desc{font-size:0.72rem;color:#1e3a5f;line-height:1.5}
+
+.cta-section{text-align:center;padding:14px 0 14px;display:flex;justify-content:center;gap:12px}
+.cta-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#0c4a6e,#0369a1,#0ea5e9);color:#fff;font-weight:800;font-size:0.9rem;padding:10px 28px;border-radius:10px;text-decoration:none;border:2.5px solid #38bdf8;box-shadow:0 6px 24px rgba(3,105,161,0.35),inset 0 1px 0 rgba(255,255,255,0.2);transition:all .2s;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.cta-btn:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(3,105,161,0.45)}
+.pdf-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#1e3a5f,#1d4ed8,#2563eb);color:#fff;font-weight:800;font-size:0.9rem;padding:10px 28px;border-radius:10px;border:2.5px solid #60a5fa;box-shadow:0 6px 24px rgba(37,99,235,0.3),inset 0 1px 0 rgba(255,255,255,0.2);cursor:pointer;transition:all .2s;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.pdf-btn:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(37,99,235,0.45)}
+
+.footer-bar{background:linear-gradient(135deg,#0c4a6e,#0369a1,#0ea5e9);border-top:3px solid #7dd3fc;padding:9px 24px;text-align:center;font-size:0.7rem;color:#fff;font-weight:700;letter-spacing:0.03em;text-shadow:0 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0 2px 8px rgba(0,0,0,0.15)}
+
+@media print{
+  @page{size:A4 portrait;margin:0}
+  html,body{width:210mm;height:297mm;margin:0;padding:0;background:#fff;display:block;min-height:auto;overflow:visible}
+  .a4-page{width:210mm;height:297mm;min-height:297mm;max-height:297mm;margin:0;padding:0;border:4px solid #0369a1;box-shadow:none;border-radius:0;overflow:visible;-webkit-print-color-adjust:exact;print-color-adjust:exact;background:linear-gradient(180deg,#eaf6ff 0%,#f5fbff 25%,#fff 50%,#f5fbff 75%,#eaf6ff 100%)}
+  .cta-section{display:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+@media(max-width:210mm){
+  .a4-page{width:100%;min-height:auto;max-height:none;border-radius:0;border-width:2px}
+  .hero-img img{max-height:180px}
 }
 </style>
 </head>
 <body>
-<div class="top-bar">
-  <div class="top-bar-inner">
+<div class="a4-page">
+  <div class="top-bar">
     <a href="index.html" class="back">← AI Solutions Portfolio</a>
     <a href="https://qmath.vercel.app/" target="_blank" class="visit-btn">플랫폼 방문 →</a>
   </div>
-</div>
 
-<section class="hero">
-  <div class="container">
+  <section class="hero">
     <div class="hero-img"><img src="ax-math-hero.jpg" alt="AX Q-Math"></div>
     <div class="badge">수학 교육</div>
     <h1>AX <em>Q-Math 질문수학</em></h1>
     <p class="hero-sub">질문으로 시작하는 수학 사고 교육. 수학은 읽기가 아닌 이해입니다. 개념 → 질문 → 생각 → 설명 → 토론 → 문제풀이의 6단계 학습 프로세스</p>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="container">
+  <section class="content">
     <div class="stats-row">
       <div class="stat-card"><div class="stat-num">6단계</div><div class="stat-label">체계적 학습 프로세스</div></div>
       <div class="stat-card"><div class="stat-num">500+</div><div class="stat-label">개념 질문 DB</div></div>
@@ -79,9 +98,11 @@ body{font-family:'Inter',system-ui,sans-serif;background:linear-gradient(180deg,
       <div class="stat-card"><div class="stat-num">97%</div><div class="stat-label">개념 이해도 향상</div></div>
     </div>
 
-    <div class="section-title">핵심 기능</div>
-    <div class="divider"></div>
-    <div class="section-desc">질문수학이 제공하는 혁신적 수학 학습 시스템</div>
+    <div class="section-header">
+      <div class="section-title">핵심 기능</div>
+      <div class="divider"></div>
+      <div class="section-desc">질문수학이 제공하는 혁신적 수학 학습 시스템</div>
+    </div>
 
     <div class="features-grid">
       <div class="feature-card">
@@ -105,13 +126,14 @@ body{font-family:'Inter',system-ui,sans-serif;background:linear-gradient(180deg,
         <div class="feature-desc">정기 테스트로 실력을 측정하고, 대시보드에서 학습 진도와 성취도를 한눈에 파악. 데이터 기반 학습 관리</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="cta-section">
-  <div class="container">
+  <section class="cta-section">
     <a href="https://qmath.vercel.app/" target="_blank" class="cta-btn">Q-Math 플랫폼 방문하기 →</a>
-  </div>
-</section>
+    <button class="pdf-btn" onclick="window.print()">PDF 다운로드 ↓</button>
+  </section>
+
+  <div class="footer-bar">© 2026 AX Q-Math 질문수학 · AI Platforms Portfolio by 심재우</div>
+</div>
 </body>
 </html>
