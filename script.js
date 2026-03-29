@@ -1012,6 +1012,7 @@ if (sessionStorage.getItem(SITE_AUTH_KEY) === 'true') {
 } else {
     if (siteLockOverlay) siteLockOverlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    if (siteLockInput) setTimeout(() => siteLockInput.focus(), 200);
 }
 
 function checkSitePassword() {
