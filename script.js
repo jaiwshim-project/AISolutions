@@ -998,82 +998,45 @@ document.querySelectorAll('.footer-link').forEach(link => {
 });
 
 // ============================================
-// 페이지 접속 잠금 (비활성화 - 랜딩 페이지 바로 노출)
+// 페이지 접속 잠금 (비밀번호 9633)
 // ============================================
+const SITE_PASSWORD = '9633';
+const SITE_AUTH_KEY = 'ai_portfolio_site_auth';
 const siteLockOverlay = document.getElementById('siteLockOverlay');
-if (siteLockOverlay) siteLockOverlay.style.display = 'none';
+const siteLockInput = document.getElementById('siteLockInput');
+const siteLockSubmit = document.getElementById('siteLockSubmit');
+const siteLockError = document.getElementById('siteLockError');
+
+if (sessionStorage.getItem(SITE_AUTH_KEY) === 'true') {
+    if (siteLockOverlay) siteLockOverlay.style.display = 'none';
+} else {
+    if (siteLockOverlay) siteLockOverlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function checkSitePassword() {
+    if (siteLockInput.value === SITE_PASSWORD) {
+        sessionStorage.setItem(SITE_AUTH_KEY, 'true');
+        siteLockOverlay.style.display = 'none';
+        document.body.style.overflow = '';
+    } else {
+        siteLockError.classList.add('show');
+        siteLockInput.value = '';
+        siteLockInput.focus();
+        setTimeout(() => siteLockError.classList.remove('show'), 2000);
+    }
+}
+
+if (siteLockSubmit) siteLockSubmit.addEventListener('click', checkSitePassword);
+if (siteLockInput) siteLockInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') checkSitePassword();
+});
 
 // ============================================
-// 링크 비밀번호 보호 (카드 링크 + GitHub)
+// 링크 비밀번호 보호 제거 (페이지 잠금으로 대체)
 // ============================================
 const passwordModal = document.getElementById('passwordModal');
-const passwordInput = document.getElementById('passwordInput');
-const passwordSubmit = document.getElementById('passwordSubmit');
-const passwordCancel = document.getElementById('passwordCancel');
-const passwordError = document.getElementById('passwordError');
-
-const LINK_PASSWORD = '9633';
-const AUTH_KEY = 'ai_portfolio_auth';
-let pendingUrl = null;
-
-function isAuthenticated() {
-    return sessionStorage.getItem(AUTH_KEY) === 'true';
-}
-
-function openLink(url) {
-    window.open(url, '_blank');
-}
-
-function openPasswordModal(url) {
-    if (isAuthenticated()) {
-        openLink(url);
-        return;
-    }
-    pendingUrl = url;
-    passwordModal.classList.add('active');
-    passwordInput.value = '';
-    passwordError.classList.remove('show');
-    setTimeout(() => passwordInput.focus(), 100);
-}
-
-// 솔루션 카드 링크 + 솔루션 목록 배너 링크 클릭 가로채기 (이벤트 위임)
-document.addEventListener('click', (e) => {
-    const cardLink = e.target.closest('.card-link');
-    const listLink = e.target.closest('a.solution-list-item');
-    const target = cardLink || listLink;
-    if (target && target.href && target.href !== '#' && !target.href.endsWith('#')) {
-        e.preventDefault();
-        openPasswordModal(target.href);
-    }
-});
-
-// GitHub 링크
-const githubLink = document.querySelector('.footer-contact-item[href*="github"]');
-if (githubLink) {
-    githubLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        openPasswordModal('https://github.com/jaiwshim-project');
-    });
-}
-
-passwordSubmit.addEventListener('click', checkPassword);
-passwordInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') checkPassword();
-});
-
-function checkPassword() {
-    if (passwordInput.value === LINK_PASSWORD) {
-        sessionStorage.setItem(AUTH_KEY, 'true');
-        passwordModal.classList.remove('active');
-        if (pendingUrl) {
-            openLink(pendingUrl);
-            pendingUrl = null;
-        }
-    } else {
-        passwordError.classList.add('show');
-        passwordInput.value = '';
-        passwordInput.focus();
-        setTimeout(() => passwordError.classList.remove('show'), 2000);
+if (passwordModal) passwordModal.style.display = 'none';
     }
 }
 
