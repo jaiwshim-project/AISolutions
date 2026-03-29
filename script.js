@@ -1038,18 +1038,6 @@ if (siteLockInput) siteLockInput.addEventListener('keypress', (e) => {
 // ============================================
 const passwordModal = document.getElementById('passwordModal');
 if (passwordModal) passwordModal.style.display = 'none';
-    }
-}
-
-passwordCancel.addEventListener('click', () => {
-    passwordModal.classList.remove('active');
-    pendingUrl = null;
-});
-
-document.querySelector('.password-modal-overlay').addEventListener('click', () => {
-    passwordModal.classList.remove('active');
-    pendingUrl = null;
-});
 
 // ============================================
 // 모바일 네비게이션 토글
