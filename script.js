@@ -504,7 +504,7 @@ const solutions = [
         description: "치과위생사협회를 위한 AI 기반 조직진단 솔루션. 조직 현황을 분석하고 발전 방향을 제시합니다.",
         tags: ["치과위생사", "조직진단", "AI", "협회"],
         status: "active",
-        link: "https://20-13-survey-diagnosis.vercel.app/"
+        link: "https://20-13-survey-diagnosis.vercel.app/index.html"
     },
     {
         id: 32,
