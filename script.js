@@ -449,7 +449,7 @@ const solutions = [
         description: "Claude Code, Supabase, Vercel, GitHub, VS Code 통합 개발 매뉴얼. AI 기반 개발 환경 구축과 실전 워크플로우를 체계적으로 안내합니다.",
         tags: ["Claude", "Supabase", "Vercel", "개발매뉴얼"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/41ClaudeManual/#home"
+        link: "https://41-claude-manual.vercel.app/#home"
     },
     {
         id: 27,
