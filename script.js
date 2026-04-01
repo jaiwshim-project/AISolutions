@@ -112,14 +112,14 @@ const solutions = [
     },
     {
         id: 56,
-        title: "AX교육플랫폼",
+        title: "AX에듀그룹 플랫폼",
         category: "axgroup",
         categoryLabel: "AX그룹",
         icon: "🎓",
         description: "AI 전환 전문가 양성 생태계. 5개 영역 50개 강의와 4단계 자격증 체계(Practitioner → Builder → Architect → Strategist), 100개 이상의 기업 프로젝트 실습, 전문가 커뮤니티를 통해 AX 전문가를 육성합니다.",
         tags: ["AX교육", "AI전환", "자격증", "기업프로젝트"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/10-07-AXEduPlatform/index.html"
+        link: "https://ax-education-platform.vercel.app"
     },
     {
         id: 55,
