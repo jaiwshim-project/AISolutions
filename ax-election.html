@@ -130,10 +130,63 @@ body{font-family:'Inter',system-ui,sans-serif;background:#c8cfe0;display:flex;ju
 
   <section class="cta-section">
     <a href="https://ax-election.vercel.app/" target="_blank" class="cta-btn">Election War-Room 방문하기 →</a>
-    <button class="pdf-btn" onclick="window.print()">PDF 다운로드 ↓</button>
+    <button class="pdf-btn" onclick="downloadAsPDF()" id="pdfBtn">PDF 다운로드 ↓</button>
   </section>
 
   <div class="footer-bar">© 2026 AX Election War-Room · AI Platforms Portfolio by 심재우</div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+async function inlineImages(container) {
+  const imgs = container.querySelectorAll('img');
+  for (const img of imgs) {
+    if (img.src.startsWith('data:')) continue;
+    try {
+      const res = await fetch(img.src);
+      const blob = await res.blob();
+      const dataUrl = await new Promise(resolve => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.readAsDataURL(blob);
+      });
+      img.src = dataUrl;
+    } catch (e) { /* 원본 유지 */ }
+  }
+}
+
+async function downloadAsPDF() {
+  const btn = document.getElementById('pdfBtn');
+  const originalText = btn.textContent;
+  btn.textContent = 'PDF 생성 중...';
+  btn.disabled = true;
+
+  try {
+    const page = document.querySelector('.a4-page');
+    const ctaSection = document.querySelector('.cta-section');
+
+    await inlineImages(page);
+    ctaSection.style.display = 'none';
+
+    const canvas = await html2canvas(page, {
+      scale: 2, useCORS: true, allowTaint: false, backgroundColor: null, logging: false,
+    });
+    ctaSection.style.display = '';
+
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    const imgData = canvas.toDataURL('image/jpeg', 0.95);
+    pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297);
+    pdf.save('AX-ELECTION-WAR-ROOM.pdf');
+  } catch (err) {
+    console.error('PDF 생성 실패:', err);
+    alert('PDF 생성에 실패했습니다. 다시 시도해주세요.');
+  } finally {
+    btn.textContent = originalText;
+    btn.disabled = false;
+  }
+}
+</script>
 </body>
 </html>
