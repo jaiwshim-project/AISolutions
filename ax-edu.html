@@ -137,8 +137,25 @@ body{font-family:'Inter',system-ui,sans-serif;background:#d5d0e0;display:flex;ju
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
+async function inlineImages(container) {
+  const imgs = container.querySelectorAll('img');
+  for (const img of imgs) {
+    if (img.src.startsWith('data:')) continue;
+    try {
+      const res = await fetch(img.src);
+      const blob = await res.blob();
+      const dataUrl = await new Promise(resolve => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.readAsDataURL(blob);
+      });
+      img.src = dataUrl;
+    } catch (e) { /* 변환 실패 시 원본 유지 */ }
+  }
+}
+
 async function downloadAsPDF() {
   const btn = document.getElementById('pdfBtn');
   const originalText = btn.textContent;
@@ -149,12 +166,16 @@ async function downloadAsPDF() {
     const page = document.querySelector('.a4-page');
     const ctaSection = document.querySelector('.cta-section');
 
+    // 이미지를 Base64로 인라인 변환 (taint 방지)
+    await inlineImages(page);
+
     // CTA 버튼 영역 숨기기 (PDF에서 제외)
     ctaSection.style.display = 'none';
 
     const canvas = await html2canvas(page, {
       scale: 2,
       useCORS: true,
+      allowTaint: false,
       backgroundColor: null,
       logging: false,
     });
@@ -164,11 +185,8 @@ async function downloadAsPDF() {
 
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF('p', 'mm', 'a4');
-    const pdfWidth = 210;
-    const pdfHeight = 297;
-
     const imgData = canvas.toDataURL('image/jpeg', 0.95);
-    pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
+    pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297);
     pdf.save('AX-EDU-GROUP.pdf');
   } catch (err) {
     console.error('PDF 생성 실패:', err);
