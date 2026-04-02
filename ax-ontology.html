@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AX Ontology OS — AI Solutions Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:#0c1a3a;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:20px 0}
+
+.a4-page{width:210mm;min-height:297mm;max-height:297mm;background:linear-gradient(180deg,#0a1628 0%,#0f1f3d 25%,#111d35 50%,#0f1f3d 75%,#0a1628 100%);border:4px solid #1e3a6e;border-radius:6px;box-shadow:0 0 0 1.5px #3b82f6,0 12px 48px rgba(30,58,110,0.4);overflow:hidden;display:flex;flex-direction:column;position:relative;font-weight:700}
+
+.top-bar{background:linear-gradient(135deg,#061020,#0f1f3d,#1e3a6e);padding:11px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:2.5px solid #3b82f6;box-shadow:0 2px 12px rgba(30,58,110,0.3)}
+.top-bar a{color:#fff;text-decoration:none;font-size:0.9rem;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.top-bar .visit-btn{background:linear-gradient(135deg,rgba(255,255,255,0.2),rgba(255,255,255,0.1));padding:6px 16px;border-radius:8px;font-weight:800;border:2px solid rgba(255,255,255,0.6);backdrop-filter:blur(4px);transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+.top-bar .visit-btn:hover{background:rgba(255,255,255,0.35);border-color:#fff;box-shadow:0 4px 16px rgba(59,130,246,0.4)}
+
+.hero{text-align:center;padding:14px 24px 12px;position:relative;background:linear-gradient(180deg,rgba(59,130,246,0.05),transparent)}
+.hero::after{content:'';position:absolute;bottom:0;left:24px;right:24px;height:2px;background:linear-gradient(90deg,transparent,#3b82f6,#60a5fa,#3b82f6,transparent)}
+.hero-img{width:100%;max-width:100%;margin:0 auto 10px;border-radius:12px;overflow:hidden;border:3px solid #1e3a6e;box-shadow:0 8px 28px rgba(30,58,110,0.4),0 0 0 1px rgba(59,130,246,0.3),inset 0 0 20px rgba(59,130,246,0.05)}
+.hero-img img{width:100%;display:block;max-height:99mm;object-fit:cover;object-position:top}
+.badge{display:inline-block;background:linear-gradient(135deg,#1e3a6e,#2563eb);font-size:0.72rem;font-weight:800;letter-spacing:0.1em;color:#e0eaff;padding:4px 16px;border-radius:14px;border:2px solid #3b82f6;margin-bottom:6px;box-shadow:0 3px 10px rgba(59,130,246,0.25)}
+.hero h1{font-size:1.72rem;font-weight:900;letter-spacing:-0.03em;margin-bottom:6px;color:#e8efff}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,#60a5fa,#a78bfa,#3b82f6);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:0.84rem;color:#94a8d0;line-height:1.6;max-width:580px;margin:0 auto}
+
+.content{flex:1;padding:12px 24px 0}
+
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.stat-card{background:linear-gradient(160deg,#0f1f3d,#162d55,#0f1f3d);border:2.5px solid #2563eb;border-radius:12px;padding:10px 8px;text-align:center;position:relative;overflow:hidden;box-shadow:0 3px 12px rgba(59,130,246,0.15)}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3.5px;background:linear-gradient(90deg,#1e3a6e,#3b82f6,#60a5fa,#3b82f6,#1e3a6e)}
+.stat-num{font-size:1.27rem;font-weight:900;color:#60a5fa;letter-spacing:-0.03em}
+.stat-label{font-size:0.72rem;color:#94a8d0;margin-top:2px;font-weight:800}
+
+.section-header{background:linear-gradient(135deg,#0f1f3d,#162d55,#1e3a6e);border:2.5px solid #2563eb;border-radius:12px;padding:10px 16px;margin-bottom:12px;box-shadow:0 3px 12px rgba(59,130,246,0.1);position:relative;overflow:hidden}
+.section-header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1e3a6e,#3b82f6,#1e3a6e)}
+.section-title{font-size:1.12rem;font-weight:900;letter-spacing:-0.02em;color:#e8efff;margin-bottom:2px}
+.divider{width:40px;height:3px;background:linear-gradient(90deg,#2563eb,#60a5fa);border-radius:4px;margin:4px 0 4px}
+.section-desc{font-size:0.77rem;color:#94a8d0;line-height:1.5;margin:0}
+
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.feature-card{background:linear-gradient(160deg,#0f1f3d,#162d55);border:2.5px solid rgba(59,130,246,0.3);border-radius:12px;padding:12px 14px 12px 18px;position:relative;overflow:hidden;transition:border-color .2s;box-shadow:0 3px 12px rgba(59,130,246,0.08)}
+.feature-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:5px;border-radius:3px 0 0 3px}
+.feature-card:nth-child(1)::before{background:linear-gradient(180deg,#1e3a6e,#3b82f6)}
+.feature-card:nth-child(2)::before{background:linear-gradient(180deg,#2563eb,#60a5fa)}
+.feature-card:nth-child(3)::before{background:linear-gradient(180deg,#3b82f6,#a78bfa)}
+.feature-card:nth-child(4)::before{background:linear-gradient(180deg,#7c3aed,#c084fc)}
+.feature-card:nth-child(1){border-color:#2563eb}
+.feature-card:nth-child(2){border-color:#3b82f6}
+.feature-card:nth-child(3){border-color:#60a5fa}
+.feature-card:nth-child(4){border-color:#a78bfa}
+.feature-icon{font-size:1.2rem;margin-bottom:4px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1e3a6e,#2563eb);border:2px solid #3b82f6;border-radius:10px;box-shadow:0 3px 8px rgba(59,130,246,0.2)}
+.feature-title{font-size:0.9rem;font-weight:800;margin-bottom:3px;color:#e0eaff}
+.feature-desc{font-size:0.72rem;color:#94a8d0;line-height:1.5}
+
+.cta-section{text-align:center;padding:14px 0 14px;display:flex;justify-content:center;gap:12px}
+.cta-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#1e3a6e,#2563eb,#3b82f6);color:#fff;font-weight:800;font-size:0.9rem;padding:10px 28px;border-radius:10px;text-decoration:none;border:2.5px solid #60a5fa;box-shadow:0 6px 24px rgba(37,99,235,0.35),inset 0 1px 0 rgba(255,255,255,0.2);transition:all .2s;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.cta-btn:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(37,99,235,0.45)}
+.pdf-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4c1d95,#7c3aed,#8b5cf6);color:#fff;font-weight:800;font-size:0.9rem;padding:10px 28px;border-radius:10px;border:2.5px solid #a78bfa;box-shadow:0 6px 24px rgba(124,58,237,0.3),inset 0 1px 0 rgba(255,255,255,0.2);cursor:pointer;transition:all .2s;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.pdf-btn:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(124,58,237,0.45)}
+
+.footer-bar{background:linear-gradient(135deg,#061020,#0f1f3d,#1e3a6e);border-top:3px solid #3b82f6;padding:9px 24px;text-align:center;font-size:0.7rem;color:#fff;font-weight:700;letter-spacing:0.03em;text-shadow:0 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0 2px 8px rgba(0,0,0,0.15)}
+
+@media print{
+  @page{size:A4 portrait;margin:0}
+  html,body{width:210mm;height:297mm;margin:0;padding:0;background:#0a1628;display:block;min-height:auto;overflow:visible}
+  .a4-page{width:210mm;height:297mm;min-height:297mm;max-height:297mm;margin:0;padding:0;border:4px solid #1e3a6e;box-shadow:none;border-radius:0;overflow:visible;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .cta-section{display:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+@media(max-width:210mm){
+  .a4-page{width:100%;min-height:auto;max-height:none;border-radius:0;border-width:2px}
+  .hero-img img{max-height:180px}
+}
+</style>
+</head>
+<body>
+<div class="a4-page">
+  <div class="top-bar">
+    <a href="index.html" class="back">&larr; AI Solutions Portfolio</a>
+    <a href="https://v0-03-04-ax-ontology-os.vercel.app/" target="_blank" class="visit-btn">플랫폼 방문 &rarr;</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-img"><img src="ax-ontology-hero.png" alt="AX Ontology OS"></div>
+    <div class="badge">AX 진단 플랫폼</div>
+    <h1>AX <em>Ontology OS</em></h1>
+    <p class="hero-sub">온톨로지 방법론으로 기업의 업무 구조를 그래프로 시각화하고, Gemini AI가 병목을 진단하여 AX 전환 전략과 제안서를 자동 생성하는 AI 기반 기업 진단 플랫폼입니다.</p>
+  </section>
+
+  <section class="content">
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-num">7단계</div><div class="stat-label">온톨로지 진단</div></div>
+      <div class="stat-card"><div class="stat-num">AI</div><div class="stat-label">Gemini 분석</div></div>
+      <div class="stat-card"><div class="stat-num">Auto</div><div class="stat-label">제안서 생성</div></div>
+      <div class="stat-card"><div class="stat-num">Graph</div><div class="stat-label">온톨로지 시각화</div></div>
+    </div>
+
+    <div class="section-header">
+      <div class="section-title">핵심 기능</div>
+      <div class="divider"></div>
+      <div class="section-desc">온톨로지 기반 기업 AX 진단부터 전략 수립, 제안서 자동 생성까지 완결된 진단 시스템</div>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🧬</div>
+        <div class="feature-title">온톨로지 그래프 시각화</div>
+        <div class="feature-desc">고객사의 업무 구조를 온톨로지 개념으로 정형화하여 노드·관계 그래프로 시각화. 복잡한 조직 업무 흐름을 한눈에 파악</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <div class="feature-title">AI 병목 진단</div>
+        <div class="feature-desc">Gemini AI가 온톨로지 그래프를 분석하여 업무 프로세스의 병목 지점과 비효율 구간을 자동으로 탐지하고 진단 리포트를 생성</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <div class="feature-title">AX 전환 전략 수립</div>
+        <div class="feature-desc">7단계 진단 프로세스를 통해 기업 맞춤형 AX 전환 전략을 도출. 우선순위별 단계적 전환 로드맵을 자동 설계</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📄</div>
+        <div class="feature-title">제안서 자동 생성</div>
+        <div class="feature-desc">진단 결과를 바탕으로 AX 전환 제안서를 자동 작성. 현황 분석, 개선 방안, 기대 효과까지 포함된 완성형 문서 출력</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <a href="https://v0-03-04-ax-ontology-os.vercel.app/" target="_blank" class="cta-btn">AX Ontology OS 방문하기 &rarr;</a>
+    <button class="pdf-btn" onclick="downloadAsPDF()" id="pdfBtn">PDF 다운로드 &darr;</button>
+  </section>
+
+  <div class="footer-bar">&copy; 2026 AX Ontology OS &middot; AI Platforms Portfolio by 심재우</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+async function inlineImages(container) {
+  const imgs = container.querySelectorAll('img');
+  for (const img of imgs) {
+    if (img.src.startsWith('data:')) continue;
+    try {
+      const res = await fetch(img.src);
+      const blob = await res.blob();
+      const dataUrl = await new Promise(resolve => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.readAsDataURL(blob);
+      });
+      img.src = dataUrl;
+    } catch (e) { /* 원본 유지 */ }
+  }
+}
+
+async function downloadAsPDF() {
+  const btn = document.getElementById('pdfBtn');
+  const originalText = btn.textContent;
+  btn.textContent = 'PDF 생성 중...';
+  btn.disabled = true;
+
+  try {
+    const page = document.querySelector('.a4-page');
+    const ctaSection = document.querySelector('.cta-section');
+
+    await inlineImages(page);
+    ctaSection.style.display = 'none';
+
+    const canvas = await html2canvas(page, {
+      scale: 2, useCORS: true, allowTaint: false, backgroundColor: null, logging: false,
+    });
+    ctaSection.style.display = '';
+
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    const imgData = canvas.toDataURL('image/jpeg', 0.95);
+    pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297);
+    pdf.save('AX-ONTOLOGY-OS.pdf');
+  } catch (err) {
+    console.error('PDF 생성 실패:', err);
+    alert('PDF 생성에 실패했습니다. 다시 시도해주세요.');
+  } finally {
+    btn.textContent = originalText;
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>

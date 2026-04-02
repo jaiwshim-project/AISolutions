@@ -9,7 +9,7 @@ const solutions = [
         description: "온톨로지 기반 기업 AX 진단 플랫폼. 조직 업무 구조를 온톨로지 그래프로 시각화하고, Gemini AI가 병목을 진단하여 AX 전환 전략과 제안서를 자동 생성합니다. 7단계 진단 프로세스를 제공합니다.",
         tags: ["AX", "온톨로지", "Gemini", "진단", "제안서"],
         status: "active",
-        link: "https://v0-03-04-ax-ontology-os.vercel.app/"
+        link: "ax-ontology.html"
     },
     {
         id: 1,
