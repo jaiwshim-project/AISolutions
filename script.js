@@ -361,7 +361,7 @@ const solutions = [
         description: "AI 기반 비즈니스 모델 및 운영 최적화 솔루션. 기업 운영 효율화와 AI 전략 수립을 지원합니다.",
         tags: ["AI", "비즈니스", "운영", "전략"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/OPSAIBM/index.html"
+        link: "https://opsaibm-deploy.vercel.app/"
     },
     {
         id: 17,
