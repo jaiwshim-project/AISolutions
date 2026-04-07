@@ -714,6 +714,17 @@ const solutions = [
         tags: ["선거", "실시간모니터링", "여론분석", "캠페인전략"],
         status: "active",
         link: "https://10-00-02.vercel.app/"
+    },
+    {
+        id: 65,
+        title: "SPIN Selling 2.0",
+        category: "business",
+        categoryLabel: "비즈니스",
+        icon: "🎯",
+        description: "Huthwaite 공식 SPIN Selling AI 교육 플랫폼. B2B 영업 방법론을 AI와 함께 체화하는 2일 집중 훈련 과정으로, SPIN 질문 작성 연습, AI 고객 롤플레이 시뮬레이션, FAB/BAF 전환 실습을 제공합니다.",
+        tags: ["SPIN", "B2B영업", "AI롤플레이", "영업교육", "시뮬레이션"],
+        status: "active",
+        link: "https://spin-selling.vercel.app/"
     }
 ];
 
