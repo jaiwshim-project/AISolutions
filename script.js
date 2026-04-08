@@ -174,7 +174,7 @@ const solutions = [
         description: "Gemini AI 기반 치과 AI 뉴스 자동 큐레이션 플랫폼. URL 등록 시 AI가 자동으로 한국어 요약·카테고리 분류·태그·읽기 시간을 생성하며, 게시판형/썸네일형 두 가지 보기를 지원합니다.",
         tags: ["치과", "AI뉴스", "Gemini", "헬스케어"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/20-09-DigitalSmileDC/index.html"
+        link: "https://20-09-digital-smile-dc.vercel.app/"
     },
     {
         id: 51,
