@@ -725,6 +725,17 @@ const solutions = [
         tags: ["SPIN", "B2B영업", "AI롤플레이", "영업교육", "시뮬레이션"],
         status: "active",
         link: "https://spin-selling.vercel.app/"
+    },
+    {
+        id: 66,
+        title: "디지털스마일치과",
+        category: "healthcare",
+        categoryLabel: "헬스케어",
+        icon: "😁",
+        description: "디지털스마일치과 AI 진단 플랫폼. AI 리포트, 장비 연동, 협업 제안, 워크플로우 등 치과 디지털 혁신 솔루션을 제공합니다.",
+        tags: ["AI", "치과", "디지털", "진단"],
+        status: "active",
+        link: "https://20-09-digital-smile-dc.vercel.app/"
     }
 ];
 
