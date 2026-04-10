@@ -438,7 +438,7 @@ const solutions = [
         description: "치과 개원 성공을 위한 5단계 통합 운영 시스템. 전략, 팀빌딩, 환자경험, 마케팅, 고객관리를 체계적으로 설계합니다.",
         tags: ["치과", "개원", "경영", "로드맵"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/14_openbuildup/"
+        link: "https://14-openbuildup.vercel.app/"
     },
     {
         id: 25,
