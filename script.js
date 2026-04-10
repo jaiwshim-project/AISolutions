@@ -427,7 +427,7 @@ const solutions = [
         description: "치과 전문 교육 아카데미. 맞춤형 학습 과정을 통해 치과 인력의 역량을 강화합니다.",
         tags: ["치과", "교육", "아카데미", "학습"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/11dentalacademy/user-select.html"
+        link: "https://11dentalacademy.vercel.app/user-select.html?dest=%23home"
     },
     {
         id: 24,
@@ -559,7 +559,7 @@ const solutions = [
         description: "치과 개원을 위한 AI 기반 입지분석 솔루션. 인구, 경쟁, 임대료, 교통, 성장성 5가지 핵심 데이터를 AI가 분석하여 최적의 개원 입지를 추천합니다.",
         tags: ["AI", "치과", "입지분석", "개원"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/16-Medical-Location-Selection-Map/#home"
+        link: "https://16-medical-location-selection-map.vercel.app/"
     },
     {
         id: 38,
@@ -570,7 +570,7 @@ const solutions = [
         description: "호화유람선 전용 AI 화재 대피 시뮬레이션. A* 동적 경로탐색, 화재 확산 모델, 군중 밀집도 분석, 소방관 AI 시스템으로 최적 대피 전략을 설계합니다.",
         tags: ["AI", "화재대피", "시뮬레이션", "안전"],
         status: "active",
-        link: "https://jaiwshim-project.github.io/16-2-FireNavi/pages/simulation.html"
+        link: "https://16-2-fire-navi.vercel.app/"
     },
     {
         id: 39,
